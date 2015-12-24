@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//Spring//DTD Bean//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!-- Application Context -->
+<beans>
+	<bean id="ComponentSpringContext"
+		class="org.springframework.context.support.ClassPathXmlApplicationContext">
+		<description>
+			Defines the parent component layer spring context.
+		</description>
+		<constructor-arg>
+			<value>classpath:beanRefFactory.xml</value>
+		</constructor-arg>
+	</bean>
+</beans>

@@ -1,0 +1,11 @@
+.class com.legendshop.core.UserManager UserManager
+.method com.legendshop.core.UserManager hasFunction (Ljava/util/Collection<Lcom/legendshop/core/security/GrantedFunction;>;Ljava/lang/String;)Z _$1
+.class com.legendshop.core.security.DelegatingFilterProxy DelegatingFilterProxy
+.field com.legendshop.core.security.DelegatingFilterProxy delegateMonitor Ljava/lang/Object; _$1
+.field com.legendshop.core.security.DelegatingFilterProxy delegate Ljavax/servlet/Filter; _$2
+.field com.legendshop.core.security.DelegatingFilterProxy targetFilterLifecycle Z _$3
+.field com.legendshop.core.security.DelegatingFilterProxy targetBeanName Ljava/lang/String; _$4
+.field com.legendshop.core.security.DelegatingFilterProxy webApplicationContext Lorg/springframework/web/context/WebApplicationContext; _$5
+.field com.legendshop.core.security.DelegatingFilterProxy contextAttribute Ljava/lang/String; _$6
+.class com.legendshop.core.tag.MyShopTag MyShopTag
+.field com.legendshop.core.tag.MyShopTag shopService Lcom/legendshop/core/service/ShopService; _$1

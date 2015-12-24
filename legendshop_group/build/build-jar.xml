@@ -1,0 +1,36 @@
+<project name="${app.name}"  basedir="." default="build-jar">
+	<property file="application.properties" />
+	
+	<property file="../../legendshop_lib/build/build.properties" />
+	<!--
+    <target name="callingTarget" depends="build">
+            <antcall target="jar-jocky">
+                   <param name="jocky.output.dir" value="../jocky" />
+            </antcall>
+     </target>
+	-->
+	<target name="jocky-build-jar">
+		    <subant target="build">
+		   	 	<file file="../jocky_build.xml"/>
+		    </subant>
+		    <subant target="jar-jocky">
+		    	<property name="app.name" value="${app.name}${app.version}"/>
+		    	<property name="jocky.bin" value="../../${app.name}/jocky/bin"/>
+		    	<property name="resource.dir" value="../../${app.name}/src/resource"/>
+		    	<property name="src.dir" value="../../${app.name}/src/java"/>
+		   	 	<file file="../../legendshop_lib/build/build.xml"/>
+		    </subant>
+	</target>
+	
+	<target name="build-jar">
+		    <subant target="jar">
+		    	<property name="app.name" value="${app.name}${app.version}"/>
+		    	<property name="jocky.bin" value="../../${app.name}/jocky/bin"/>
+		    	<property name="resource.dir" value="../../${app.name}/src/resource"/>
+		    	<property name="src.dir" value="../../${app.name}/src/java"/>
+		    	<property name="lib.root" value="${lib.root}"/>
+		   	 	<file file="../../legendshop_lib/build/build.xml"/>
+		    </subant>
+	</target>
+</project>
+

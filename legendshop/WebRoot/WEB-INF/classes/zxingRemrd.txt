@@ -1,0 +1,7 @@
+zxing // 谷歌二维码java api
+core-3.0.0.jar
+项目lib中已经存在
+
+qrcode //小日本二维码java api
+
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0020)http://localhost/all -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./css/css.css" rel="stylesheet" type="text/css">
+<link href="./css/pager.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+
+
+
+<link href="./css/searchall.css" rel="stylesheet" type="text/css">
+<title> 
+		
+		LegendShop多用户商城系统
+	
+		
+	</title>
+<link rel="icon" href="http://localhost/favicon.ico" type="image/x-icon">
+
+<meta name="description" content="home,LegendShop多用户商城系统">
+<meta name="keywords" content="home,LegendShop多用户商城系统">
+<meta name="keywords" content="LegendShop 网购平台, 网店系统, 商城系统, 商城系统, 电子商务系统, B2C系统, 购物系统, 网上商店系统, 网上交易系统, JAVA网店, JAVA商城, JSP网店, JSP商城, SSH项目, JAVA开源项目">
+
+<script>
+	function submitSearchAllform(entityType,keyword){
+		//var keyword = document.getElementById("keyword").value;
+        document.getElementById("searchAllform").action = "/searchall/" + entityType +"/"+keyword;
+		document.getElementById("searchAllform").submit();
+	}
+</script>
+</head>
+<body>
+	<table width="100%">
+		<tbody><tr>
+			<td style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #CCC">
+				<table width="100%">
+					<tbody><tr>
+						<td align="left"><a href="http://localhost/index">进入店铺首页</a> &nbsp; 
+								
+									<span style="color: red; font-weight: bold;">root</span>
+									<a href="http://localhost/p/myaccount">我的帐号</a>
+									<a href="http://localhost/p/order">我的订单</a>
+									<a href="http://localhost/p/logout" target="_parent">退出</a>
+									
+										
+									
+									
+										<a href="http://localhost/admin/index">后台管理</a>
+									
+								
+								
+							 <a href="http://localhost/reg">用户注册</a> </td>
+						<td align="right"><a href="http://www.kingbloc.com/club">论坛</a></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div align="center" style="margin: 40px">
+					<a href="http://localhost/index"><img src="./css/logo.png" width="240px"></a>
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td align="center">
+				<form action="http://localhost/searchall" method="post" id="searchAllform" name="searchAllform">
+					<table>
+						<tbody><tr>
+							<td align="left"><input type="text" value="" id="keyword" name="keyword" maxlength="100" size="50" class="kw" onkeydown="if(event.keyCode==13)submitSearchAllform(0,document.getElementById(&quot;keyword&quot;).value);">
+								<input type="button" value="搜商品" class="btn" onmousedown="this.className=&#39;btn btn_h&#39;" onmouseout="this.className=&#39;btn&#39;" onclick="javascript:submitSearchAllform(0,document.getElementById(&quot;keyword&quot;).value)">
+								</td>
+						</tr>
+					</tbody></table>
+				</form>
+			</td>
+		</tr>
+	</tbody></table>
+	<center>
+		
+		<br><br><br><br><br><br> 
+
+
+
+
+
+
+
+<table width="954px" cellpadding="3px" cellspacing="3px" align="center">
+	<tbody><tr><td width="100%" align="center">
+			<a href="http://localhost/news/190" target="_blank">大家电购买帮助</a>
+		
+			<a href="http://localhost/news/188" target="_blank">公司简介</a>
+		
+			<a href="http://localhost/news/189" target="_blank">售后服务</a>
+		
+			<a href="http://localhost/news/182" target="_blank">交易条款</a>
+		 LegendShop多用户商城系统 
+    	        &nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank">
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" align="center">©Copyright 2012 Power By <a href="http://www.legendesign.net/" target="_blank">LegendShop
+				3.0.3.5</a> All Rights Reserved.&nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备09106104号-10</a>
+		</td>
+	</tr>
+	<tr>
+</tr></tbody></table>
+	</center></body></html>

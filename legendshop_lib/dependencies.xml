@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="dependencies" default="depend.all">
+    <dirname property="dependencies.basedir" file="${ant.file.dependencies}"/>
+    <!-- ================================================================== -->
+    <target name="depend.all" depends="depend.legendshop">
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.legendshop"  depends="depend.model,depend.core,depend.util,depend.spi,depend.payment,depend.search,depend.usermanager">
+        <ant dir="${dependencies.basedir}/../legendshop"  target="${dependency.target}"   inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.model" depends="depend.util">
+        <ant dir="${dependencies.basedir}/../legendshop_model" target="${dependency.target}"  inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.util">
+        <ant dir="${dependencies.basedir}/../legendshop_util"  target="${dependency.target}"  inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.core" depends="depend.util,depend.model">
+        <ant dir="${dependencies.basedir}/../legendshop_core"  target="${dependency.target}" inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.templet_red"  depends="depend.legendshop,depend.model,depend.spi">
+        <ant dir="${dependencies.basedir}/../legendshop_templet_red" target="${dependency.target}"  inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.usercenter" depends="depend.model,depend.spi">
+        <ant dir="${dependencies.basedir}/../legendshop_usercenter" target="${dependency.target}"  inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.spi" depends="depend.model,depend.core,depend.util">
+        <ant dir="${dependencies.basedir}/../legendshop_spi"  target="${dependency.target}" inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.cache_manager" depends="depend.model,depend.core,depend.util">
+        <ant dir="${dependencies.basedir}/../legendshop_cache_manager" target="${dependency.target}" inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.central" depends="depend.model,depend.core,depend.util">
+        <ant dir="${dependencies.basedir}/../legendshop_central"  target="${dependency.target}"  inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.payment" depends="depend.model,depend.core,depend.util,depend.spi">
+        <ant dir="${dependencies.basedir}/../legendshop_payment"  target="${dependency.target}"  inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.search" depends="depend.model,depend.core,depend.util,depend.spi">
+        <ant dir="${dependencies.basedir}/../legendshop_search"  target="${dependency.target}"  inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.group" depends="depend.model,depend.core,depend.util,depend.spi">
+        <ant dir="${dependencies.basedir}/../legendshop_group"  target="${dependency.target}"  inheritAll="false"/>
+    </target>
+    <!-- ================================================================== -->
+    <target name="depend.usermanager" depends="depend.model,depend.core,depend.util,depend.spi">
+        <ant dir="${dependencies.basedir}/../legendshop_usermanager"  target="${dependency.target}"  inheritAll="false"/>
+    </target>	
+	
+</project>

@@ -1,0 +1,890 @@
+.class com.legendshop.model.ErrorInfo ErrorInfo
+.field com.legendshop.model.ErrorInfo desc Ljava/lang/String; _$1
+.field com.legendshop.model.ErrorInfo type Lcom/legendshop/model/ErrorType; _$2
+.field com.legendshop.model.ErrorInfo filed Ljava/lang/String; _$3
+.class com.legendshop.model.ErrorType ErrorType
+.field com.legendshop.model.ErrorType $VALUES [Lcom/legendshop/model/ErrorType; _$1
+.class com.legendshop.model.KeyValueEntity KeyValueEntity
+.field com.legendshop.model.KeyValueEntity value Ljava/lang/String; _$1
+.field com.legendshop.model.KeyValueEntity key Ljava/lang/String; _$2
+.class com.legendshop.model.MailInfo MailInfo
+.field com.legendshop.model.MailInfo text Ljava/lang/String; _$1
+.field com.legendshop.model.MailInfo subject Ljava/lang/String; _$2
+.field com.legendshop.model.MailInfo to Ljava/lang/String; _$3
+.class com.legendshop.model.ModelUtil ModelUtil
+.class com.legendshop.model.ProdSearchArgs ProdSearchArgs
+.field com.legendshop.model.ProdSearchArgs hasProd Z _$1
+.field com.legendshop.model.ProdSearchArgs orderBy Ljava/lang/String; _$2
+.field com.legendshop.model.ProdSearchArgs orderDir Ljava/lang/String; _$3
+.class com.legendshop.model.StatusKeyValueEntity StatusKeyValueEntity
+.field com.legendshop.model.StatusKeyValueEntity status Ljava/lang/String; _$3
+.class com.legendshop.model.SubForm SubForm
+.field com.legendshop.model.SubForm basketId [Ljava/lang/Long; _$1
+.field com.legendshop.model.SubForm userPostcode Ljava/lang/String; _$2
+.field com.legendshop.model.SubForm userLastip Ljava/lang/String; _$3
+.field com.legendshop.model.SubForm userLasttime Ljava/util/Date; _$4
+.field com.legendshop.model.SubForm userRegip Ljava/lang/String; _$5
+.field com.legendshop.model.SubForm userRegtime Ljava/util/Date; _$6
+.field com.legendshop.model.SubForm userTel Ljava/lang/String; _$7
+.field com.legendshop.model.SubForm payTypeName Ljava/lang/String; _$8
+.field com.legendshop.model.SubForm userAdds Ljava/lang/String; _$9
+.field com.legendshop.model.SubForm userMail Ljava/lang/String; _$10
+.field com.legendshop.model.SubForm userPass Ljava/lang/String; _$11
+.field com.legendshop.model.SubForm orderName Ljava/lang/String; _$12
+.field com.legendshop.model.SubForm userName Ljava/lang/String; _$13
+.field com.legendshop.model.SubForm userId Ljava/lang/Integer; _$14
+.field com.legendshop.model.SubForm other Ljava/lang/String; _$15
+.field com.legendshop.model.SubForm payType Ljava/lang/Long; _$16
+.field com.legendshop.model.SubForm total Ljava/lang/Double; _$17
+.class com.legendshop.model.SubListForm SubListForm
+.field com.legendshop.model.SubListForm attribute Ljava/lang/String; _$1
+.field com.legendshop.model.SubListForm prodName Ljava/lang/String; _$2
+.field com.legendshop.model.SubListForm basketCount Ljava/lang/Integer; _$3
+.field com.legendshop.model.SubListForm pic Ljava/lang/String; _$4
+.field com.legendshop.model.SubListForm prodId Ljava/lang/Long; _$5
+.field com.legendshop.model.SubListForm carriage Ljava/lang/Double; _$6
+.field com.legendshop.model.SubListForm cash Ljava/lang/Double; _$7
+.field com.legendshop.model.SubListForm total Ljava/lang/Double; _$8
+.field com.legendshop.model.SubListForm basketId Ljava/lang/Long; _$9
+.field com.legendshop.model.SubListForm basketList Ljava/util/List<Lcom/legendshop/model/entity/Basket;>; _$10
+.field com.legendshop.model.SubListForm shopName Ljava/lang/String; _$11
+.field com.legendshop.model.SubListForm payTypeName Ljava/lang/String; _$12
+.field com.legendshop.model.SubListForm status Ljava/lang/Integer; _$13
+.field com.legendshop.model.SubListForm payTypeId Ljava/lang/String; _$14
+.field com.legendshop.model.SubListForm payId Ljava/lang/Long; _$15
+.field com.legendshop.model.SubListForm subTotal Ljava/lang/Double; _$16
+.field com.legendshop.model.SubListForm subType Ljava/lang/String; _$17
+.field com.legendshop.model.SubListForm subCheck Ljava/lang/String; _$18
+.field com.legendshop.model.SubListForm subNumber Ljava/lang/String; _$19
+.field com.legendshop.model.SubListForm subDate Ljava/util/Date; _$20
+.field com.legendshop.model.SubListForm orderName Ljava/lang/String; _$21
+.field com.legendshop.model.SubListForm userName Ljava/lang/String; _$22
+.field com.legendshop.model.SubListForm subId Ljava/lang/Long; _$23
+.class com.legendshop.model.entity.BaseEntity BaseEntity
+.class com.legendshop.model.entity.Basket Basket
+.field com.legendshop.model.entity.Basket shopName Ljava/lang/String; _$1
+.field com.legendshop.model.entity.Basket lastUpdateDate Ljava/util/Date; _$2
+.field com.legendshop.model.entity.Basket basketDate Ljava/util/Date; _$3
+.field com.legendshop.model.entity.Basket subNumber Ljava/lang/String; _$4
+.field com.legendshop.model.entity.Basket cash Ljava/lang/Double; _$5
+.field com.legendshop.model.entity.Basket price Ljava/lang/Double; _$6
+.field com.legendshop.model.entity.Basket prodName Ljava/lang/String; _$7
+.field com.legendshop.model.entity.Basket basketCheck Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Basket basketCount Ljava/lang/Integer; _$9
+.field com.legendshop.model.entity.Basket userName Ljava/lang/String; _$10
+.field com.legendshop.model.entity.Basket pic Ljava/lang/String; _$11
+.field com.legendshop.model.entity.Basket prodId Ljava/lang/Long; _$12
+.field com.legendshop.model.entity.Basket basketId Ljava/lang/Long; _$13
+.field com.legendshop.model.entity.Basket attribute Ljava/lang/String; _$14
+.field com.legendshop.model.entity.Basket carriage Ljava/lang/Double; _$15
+.field com.legendshop.model.entity.Basket total Ljava/lang/Double; _$16
+.class com.legendshop.model.SubQueryForm SubQueryForm
+.field com.legendshop.model.SubQueryForm kwText Ljava/lang/String; _$1
+.field com.legendshop.model.SubQueryForm kwType Ljava/lang/Integer; _$2
+.field com.legendshop.model.SubQueryForm orderActiveStatus Ljava/lang/Integer; _$3
+.field com.legendshop.model.SubQueryForm orderType Ljava/lang/Integer; _$4
+.class com.legendshop.model.UserInfo UserInfo
+.field com.legendshop.model.UserInfo shopDetail Lcom/legendshop/model/entity/ShopDetailView; _$1
+.field com.legendshop.model.UserInfo articleNum Ljava/lang/Long; _$2
+.field com.legendshop.model.UserInfo unReadMessageNum Ljava/lang/Long; _$3
+.field com.legendshop.model.UserInfo processingOrderNum Ljava/lang/Long; _$4
+.field com.legendshop.model.UserInfo shopTotalNum Ljava/lang/Long; _$5
+.field com.legendshop.model.UserInfo userTotalNum Ljava/lang/Long; _$6
+.field com.legendshop.model.UserInfo newestVersion Ljava/lang/String; _$7
+.field com.legendshop.model.UserInfo currentVersion Ljava/lang/String; _$8
+.class com.legendshop.model.entity.AbstractEntity AbstractEntity
+.class com.legendshop.model.entity.UploadFile UploadFile
+.class com.legendshop.model.entity.AbstractShopDetail AbstractShopDetail
+.class com.legendshop.model.entity.ShopDetailView ShopDetailView
+.field com.legendshop.model.entity.ShopDetailView fax Ljava/lang/String; _$1
+.field com.legendshop.model.entity.ShopDetailView qq Ljava/lang/String; _$2
+.field com.legendshop.model.entity.ShopDetailView msnNumber Ljava/lang/String; _$3
+.field com.legendshop.model.entity.ShopDetailView userMobile Ljava/lang/String; _$4
+.field com.legendshop.model.entity.ShopDetailView nickName Ljava/lang/String; _$5
+.field com.legendshop.model.entity.ShopDetailView area Ljava/lang/String; _$6
+.field com.legendshop.model.entity.ShopDetailView city Ljava/lang/String; _$7
+.field com.legendshop.model.entity.ShopDetailView province Ljava/lang/String; _$8
+.class com.legendshop.model.ValidationException ValidationException
+.field com.legendshop.model.ValidationException code I _$1
+.class com.legendshop.model.ValidationMessage ValidationMessage
+.field com.legendshop.model.ValidationMessage errorInfos Ljava/util/List<Lcom/legendshop/model/ErrorInfo;>; _$1
+.class com.legendshop.model.dynamic.DynamicModel DynamicModel
+.field com.legendshop.model.dynamic.DynamicModel model [Lcom/legendshop/model/dynamic/Model; _$1
+.field com.legendshop.model.dynamic.DynamicModel sortId Ljava/lang/Long; _$2
+.field com.legendshop.model.dynamic.DynamicModel type Ljava/lang/Integer; _$3
+.field com.legendshop.model.dynamic.DynamicModel tempName Ljava/lang/String; _$4
+.field com.legendshop.model.dynamic.DynamicModel prodId Ljava/lang/Long; _$5
+.field com.legendshop.model.dynamic.DynamicModel tempId Ljava/lang/Long; _$6
+.class com.legendshop.model.dynamic.Model Model
+.field com.legendshop.model.dynamic.Model items [Lcom/legendshop/model/dynamic/Item; _$1
+.field com.legendshop.model.dynamic.Model type Ljava/lang/String; _$2
+.field com.legendshop.model.dynamic.Model id Ljava/lang/String; _$3
+.class com.legendshop.model.dynamic.Item Item
+.field com.legendshop.model.dynamic.Item value Ljava/lang/String; _$1
+.field com.legendshop.model.dynamic.Item key Ljava/lang/String; _$2
+.class com.legendshop.model.dynamic.ModelType ModelType
+.field com.legendshop.model.dynamic.ModelType $VALUES [Lcom/legendshop/model/dynamic/ModelType; _$1
+.class com.legendshop.model.entity.AbstractProduct AbstractProduct
+.class com.legendshop.model.entity.Advertisement Advertisement
+.field com.legendshop.model.entity.Advertisement title Ljava/lang/String; _$1
+.field com.legendshop.model.entity.Advertisement sourceInput Ljava/lang/String; _$2
+.field com.legendshop.model.entity.Advertisement type Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Advertisement enabled Ljava/lang/Integer; _$4
+.field com.legendshop.model.entity.Advertisement userName Ljava/lang/String; _$5
+.field com.legendshop.model.entity.Advertisement userId Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Advertisement linkUrl Ljava/lang/String; _$7
+.field com.legendshop.model.entity.Advertisement picUrl Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Advertisement id Ljava/lang/Long; _$9
+.class com.legendshop.model.entity.Area Area
+.field com.legendshop.model.entity.Area area Ljava/lang/String; _$1
+.field com.legendshop.model.entity.Area cityid Ljava/lang/String; _$2
+.field com.legendshop.model.entity.Area areaid Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Area id Ljava/lang/String; _$4
+.class com.legendshop.model.entity.Ask Ask
+.field com.legendshop.model.entity.Ask replyTime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.Ask createTime Ljava/util/Date; _$2
+.field com.legendshop.model.entity.Ask comment Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Ask content Ljava/lang/String; _$4
+.field com.legendshop.model.entity.Ask type Ljava/lang/String; _$5
+.field com.legendshop.model.entity.Ask shopId Ljava/lang/Long; _$6
+.field com.legendshop.model.entity.Ask prodId Ljava/lang/Long; _$7
+.field com.legendshop.model.entity.Ask userName Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Ask userId Ljava/lang/String; _$9
+.field com.legendshop.model.entity.Ask askId Ljava/lang/Long; _$10
+.class com.legendshop.model.entity.Brand Brand
+.field com.legendshop.model.entity.Brand sortId Ljava/lang/Long; _$1
+.field com.legendshop.model.entity.Brand memo Ljava/lang/String; _$2
+.field com.legendshop.model.entity.Brand brandPic Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Brand userName Ljava/lang/String; _$4
+.field com.legendshop.model.entity.Brand userId Ljava/lang/String; _$5
+.field com.legendshop.model.entity.Brand seq Ljava/lang/Integer; _$6
+.field com.legendshop.model.entity.Brand brandName Ljava/lang/String; _$7
+.field com.legendshop.model.entity.Brand brandId Ljava/lang/Long; _$8
+.class com.legendshop.model.entity.Cash Cash
+.field com.legendshop.model.entity.Cash createTime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.Cash ip Ljava/lang/String; _$2
+.field com.legendshop.model.entity.Cash endTime Ljava/util/Date; _$3
+.field com.legendshop.model.entity.Cash beginTime Ljava/util/Date; _$4
+.field com.legendshop.model.entity.Cash status Ljava/lang/String; _$5
+.field com.legendshop.model.entity.Cash money Ljava/lang/Double; _$6
+.field com.legendshop.model.entity.Cash detail Ljava/lang/String; _$7
+.field com.legendshop.model.entity.Cash subId Ljava/lang/Long; _$8
+.field com.legendshop.model.entity.Cash partnerId Ljava/lang/String; _$9
+.field com.legendshop.model.entity.Cash prodId Ljava/lang/Long; _$10
+.field com.legendshop.model.entity.Cash shopId Ljava/lang/String; _$11
+.field com.legendshop.model.entity.Cash code Ljava/lang/String; _$12
+.field com.legendshop.model.entity.Cash userName Ljava/lang/String; _$13
+.field com.legendshop.model.entity.Cash userId Ljava/lang/String; _$14
+.field com.legendshop.model.entity.Cash cashId Ljava/lang/Long; _$15
+.class com.legendshop.model.entity.CashFlow CashFlow
+.field com.legendshop.model.entity.CashFlow createTime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.CashFlow action Ljava/lang/String; _$2
+.field com.legendshop.model.entity.CashFlow money Ljava/lang/Double; _$3
+.field com.legendshop.model.entity.CashFlow direction Ljava/lang/String; _$4
+.field com.legendshop.model.entity.CashFlow detail Ljava/lang/String; _$5
+.field com.legendshop.model.entity.CashFlow detailId Ljava/lang/String; _$6
+.field com.legendshop.model.entity.CashFlow operatorId Ljava/lang/String; _$7
+.field com.legendshop.model.entity.CashFlow userName Ljava/lang/String; _$8
+.field com.legendshop.model.entity.CashFlow userId Ljava/lang/String; _$9
+.field com.legendshop.model.entity.CashFlow flowId Ljava/lang/Long; _$10
+.class com.legendshop.model.entity.City City
+.field com.legendshop.model.entity.City city Ljava/lang/String; _$1
+.field com.legendshop.model.entity.City cityid Ljava/lang/String; _$2
+.field com.legendshop.model.entity.City provinceid Ljava/lang/String; _$3
+.field com.legendshop.model.entity.City id Ljava/lang/String; _$4
+.class com.legendshop.model.entity.ConstTable ConstTable
+.field com.legendshop.model.entity.ConstTable seq Ljava/lang/Integer; _$1
+.field com.legendshop.model.entity.ConstTable value Ljava/lang/String; _$2
+.field com.legendshop.model.entity.ConstTable id Lcom/legendshop/model/entity/ConstTableId; _$3
+.class com.legendshop.model.entity.ConstTableId ConstTableId
+.field com.legendshop.model.entity.ConstTableId type Ljava/lang/String; _$1
+.field com.legendshop.model.entity.ConstTableId key Ljava/lang/String; _$2
+.class com.legendshop.model.entity.Coupon Coupon
+.field com.legendshop.model.entity.Coupon buyId Ljava/lang/Integer; _$1
+.field com.legendshop.model.entity.Coupon smsTime Ljava/util/Date; _$2
+.field com.legendshop.model.entity.Coupon createTime Ljava/util/Date; _$3
+.field com.legendshop.model.entity.Coupon consumeTime Ljava/util/Date; _$4
+.field com.legendshop.model.entity.Coupon expireTime Ljava/util/Date; _$5
+.field com.legendshop.model.entity.Coupon smsContent Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Coupon smsStatus Ljava/lang/String; _$7
+.field com.legendshop.model.entity.Coupon ip Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Coupon status Ljava/lang/String; _$9
+.field com.legendshop.model.entity.Coupon secret Ljava/lang/String; _$10
+.field com.legendshop.model.entity.Coupon score Ljava/lang/Long; _$11
+.field com.legendshop.model.entity.Coupon type Ljava/lang/String; _$12
+.field com.legendshop.model.entity.Coupon subId Ljava/lang/Long; _$13
+.field com.legendshop.model.entity.Coupon prodId Ljava/lang/Long; _$14
+.field com.legendshop.model.entity.Coupon partnerId Ljava/lang/Long; _$15
+.field com.legendshop.model.entity.Coupon shopId Ljava/lang/Long; _$16
+.field com.legendshop.model.entity.Coupon userName Ljava/lang/String; _$17
+.field com.legendshop.model.entity.Coupon userId Ljava/lang/String; _$18
+.field com.legendshop.model.entity.Coupon couponId Ljava/lang/Long; _$19
+.class com.legendshop.model.entity.DeliveryCorp DeliveryCorp
+.field com.legendshop.model.entity.DeliveryCorp modifyTime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.DeliveryCorp createTime Ljava/util/Date; _$2
+.field com.legendshop.model.entity.DeliveryCorp url Ljava/lang/String; _$3
+.field com.legendshop.model.entity.DeliveryCorp name Ljava/lang/String; _$4
+.field com.legendshop.model.entity.DeliveryCorp userName Ljava/lang/String; _$5
+.field com.legendshop.model.entity.DeliveryCorp userId Ljava/lang/String; _$6
+.field com.legendshop.model.entity.DeliveryCorp dvyId Ljava/lang/Long; _$7
+.class com.legendshop.model.entity.DeliveryType DeliveryType
+.field com.legendshop.model.entity.DeliveryType modifyTime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.DeliveryType createTime Ljava/util/Date; _$2
+.field com.legendshop.model.entity.DeliveryType notes Ljava/lang/String; _$3
+.field com.legendshop.model.entity.DeliveryType name Ljava/lang/String; _$4
+.field com.legendshop.model.entity.DeliveryType type Ljava/lang/String; _$5
+.field com.legendshop.model.entity.DeliveryType dvyId Ljava/lang/Long; _$6
+.field com.legendshop.model.entity.DeliveryType userName Ljava/lang/String; _$7
+.field com.legendshop.model.entity.DeliveryType userId Ljava/lang/String; _$8
+.field com.legendshop.model.entity.DeliveryType dvyTypeId Ljava/lang/Long; _$9
+.class com.legendshop.model.entity.DownloadLog DownloadLog
+.field com.legendshop.model.entity.DownloadLog date Ljava/util/Date; _$1
+.field com.legendshop.model.entity.DownloadLog fileName Ljava/lang/String; _$2
+.field com.legendshop.model.entity.DownloadLog shopName Ljava/lang/String; _$3
+.field com.legendshop.model.entity.DownloadLog userName Ljava/lang/String; _$4
+.field com.legendshop.model.entity.DownloadLog area Ljava/lang/String; _$5
+.field com.legendshop.model.entity.DownloadLog country Ljava/lang/String; _$6
+.field com.legendshop.model.entity.DownloadLog ip Ljava/lang/String; _$7
+.field com.legendshop.model.entity.DownloadLog dlId Ljava/lang/Long; _$8
+.class com.legendshop.model.entity.NamedEntity NamedEntity
+.class com.legendshop.model.entity.DynamicTemp DynamicTemp
+.field com.legendshop.model.entity.DynamicTemp modelList Ljava/util/List<Lcom/legendshop/model/dynamic/Model;>; _$1
+.field com.legendshop.model.entity.DynamicTemp status Ljava/lang/Integer; _$2
+.field com.legendshop.model.entity.DynamicTemp sortName Ljava/lang/String; _$3
+.field com.legendshop.model.entity.DynamicTemp sortId Ljava/lang/Long; _$4
+.field com.legendshop.model.entity.DynamicTemp userName Ljava/lang/String; _$5
+.field com.legendshop.model.entity.DynamicTemp type Ljava/lang/Integer; _$6
+.field com.legendshop.model.entity.DynamicTemp content Ljava/lang/String; _$7
+.field com.legendshop.model.entity.DynamicTemp name Ljava/lang/String; _$8
+.field com.legendshop.model.entity.DynamicTemp id Ljava/lang/Long; _$9
+.class com.legendshop.model.entity.ExternalLink ExternalLink
+.field com.legendshop.model.entity.ExternalLink picture Ljava/lang/String; _$1
+.field com.legendshop.model.entity.ExternalLink userName Ljava/lang/String; _$2
+.field com.legendshop.model.entity.ExternalLink userId Ljava/lang/String; _$3
+.field com.legendshop.model.entity.ExternalLink bs Ljava/lang/Integer; _$4
+.field com.legendshop.model.entity.ExternalLink content Ljava/lang/String; _$5
+.field com.legendshop.model.entity.ExternalLink wordlink Ljava/lang/String; _$6
+.field com.legendshop.model.entity.ExternalLink url Ljava/lang/String; _$7
+.field com.legendshop.model.entity.ExternalLink id Ljava/lang/Long; _$8
+.class com.legendshop.model.entity.Function Function
+.field com.legendshop.model.entity.Function roles Ljava/util/List<Lcom/legendshop/model/entity/Role;>; _$1
+.field com.legendshop.model.entity.Function note Ljava/lang/String; _$2
+.field com.legendshop.model.entity.Function protectFunction Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Function parentName Ljava/lang/String; _$4
+.field com.legendshop.model.entity.Function url Ljava/lang/String; _$5
+.field com.legendshop.model.entity.Function name Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Function id Ljava/lang/String; _$7
+.class com.legendshop.model.entity.Role Role
+.field com.legendshop.model.entity.Role functions Ljava/util/List<Lcom/legendshop/model/entity/Function;>; _$1
+.field com.legendshop.model.entity.Role users Ljava/util/List<Lcom/legendshop/model/entity/UserEntity;>; _$2
+.field com.legendshop.model.entity.Role note Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Role enabled Ljava/lang/String; _$4
+.field com.legendshop.model.entity.Role roleType Ljava/lang/String; _$5
+.field com.legendshop.model.entity.Role name Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Role id Ljava/lang/String; _$7
+.class com.legendshop.model.entity.UserEntity UserEntity
+.field com.legendshop.model.entity.UserEntity note Ljava/lang/String; _$1
+.field com.legendshop.model.entity.UserEntity enabled Ljava/lang/String; _$2
+.field com.legendshop.model.entity.UserEntity passwordag Ljava/lang/String; _$3
+.field com.legendshop.model.entity.UserEntity password Ljava/lang/String; _$4
+.field com.legendshop.model.entity.UserEntity name Ljava/lang/String; _$5
+.field com.legendshop.model.entity.UserEntity id Ljava/lang/String; _$6
+.class com.legendshop.model.entity.GroupProduct GroupProduct
+.field com.legendshop.model.entity.GroupProduct isPost Ljava/lang/Boolean; _$1
+.field com.legendshop.model.entity.GroupProduct salesMax Ljava/lang/Integer; _$2
+.field com.legendshop.model.entity.GroupProduct salesNum Ljava/lang/Integer; _$3
+.field com.legendshop.model.entity.GroupProduct salesMin Ljava/lang/Integer; _$4
+.field com.legendshop.model.entity.GroupProduct soldOut Ljava/lang/Boolean; _$5
+.field com.legendshop.model.entity.GroupProduct couponEndTime Ljava/util/Date; _$6
+.field com.legendshop.model.entity.GroupProduct couponStartTime Ljava/util/Date; _$7
+.field com.legendshop.model.entity.GroupProduct maxMoney Ljava/lang/Double; _$8
+.field com.legendshop.model.entity.GroupProduct dvyTypeId Ljava/lang/Long; _$9
+.field com.legendshop.model.entity.GroupProduct maxBuys Ljava/lang/Integer; _$10
+.field com.legendshop.model.entity.GroupProduct visualBuys Ljava/lang/Integer; _$11
+.field com.legendshop.model.entity.GroupProduct buyCondition Ljava/lang/String; _$12
+.field com.legendshop.model.entity.GroupProduct successCause Ljava/lang/String; _$13
+.field com.legendshop.model.entity.GroupProduct partnerId Ljava/lang/Long; _$14
+.field com.legendshop.model.entity.GroupProduct prodId Ljava/lang/Long; _$15
+.field com.legendshop.model.entity.GroupProduct product Lcom/legendshop/model/entity/Product; _$16
+.class com.legendshop.model.entity.Product Product
+.field com.legendshop.model.entity.Product groupProduct Lcom/legendshop/model/entity/GroupProduct; _$1
+.class com.legendshop.model.entity.Hotsearch Hotsearch
+.field com.legendshop.model.entity.Hotsearch seq Ljava/lang/Integer; _$1
+.field com.legendshop.model.entity.Hotsearch userName Ljava/lang/String; _$2
+.field com.legendshop.model.entity.Hotsearch userId Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Hotsearch date Ljava/util/Date; _$4
+.field com.legendshop.model.entity.Hotsearch msg Ljava/lang/String; _$5
+.field com.legendshop.model.entity.Hotsearch sortName Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Hotsearch sort Ljava/lang/Long; _$7
+.field com.legendshop.model.entity.Hotsearch title Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Hotsearch id Ljava/lang/Long; _$9
+.class com.legendshop.model.entity.ImgFile ImgFile
+.field com.legendshop.model.entity.ImgFile status Ljava/lang/Integer; _$1
+.field com.legendshop.model.entity.ImgFile upoadTime Ljava/util/Date; _$2
+.field com.legendshop.model.entity.ImgFile fileSize Ljava/lang/Integer; _$3
+.field com.legendshop.model.entity.ImgFile fileType Ljava/lang/String; _$4
+.field com.legendshop.model.entity.ImgFile filePath Ljava/lang/String; _$5
+.field com.legendshop.model.entity.ImgFile productType Ljava/lang/Short; _$6
+.field com.legendshop.model.entity.ImgFile productId Ljava/lang/Long; _$7
+.field com.legendshop.model.entity.ImgFile userName Ljava/lang/String; _$8
+.field com.legendshop.model.entity.ImgFile fileId Ljava/lang/Long; _$9
+.class com.legendshop.model.entity.Indexjpg Indexjpg
+.field com.legendshop.model.entity.Indexjpg uploadTime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.Indexjpg seq Ljava/lang/Integer; _$2
+.field com.legendshop.model.entity.Indexjpg status I _$3
+.field com.legendshop.model.entity.Indexjpg userName Ljava/lang/String; _$4
+.field com.legendshop.model.entity.Indexjpg userId Ljava/lang/String; _$5
+.field com.legendshop.model.entity.Indexjpg titleLink Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Indexjpg link Ljava/lang/String; _$7
+.field com.legendshop.model.entity.Indexjpg stitle Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Indexjpg title Ljava/lang/String; _$9
+.field com.legendshop.model.entity.Indexjpg alt Ljava/lang/String; _$10
+.field com.legendshop.model.entity.Indexjpg img Ljava/lang/String; _$11
+.field com.legendshop.model.entity.Indexjpg href Ljava/lang/String; _$12
+.field com.legendshop.model.entity.Indexjpg id Ljava/lang/Long; _$13
+.class com.legendshop.model.entity.LoginHistory LoginHistory
+.field com.legendshop.model.entity.LoginHistory area Ljava/lang/String; _$1
+.field com.legendshop.model.entity.LoginHistory country Ljava/lang/String; _$2
+.field com.legendshop.model.entity.LoginHistory loginTimes Ljava/lang/Integer; _$3
+.field com.legendshop.model.entity.LoginHistory endTime Ljava/util/Date; _$4
+.field com.legendshop.model.entity.LoginHistory startTime Ljava/util/Date; _$5
+.field com.legendshop.model.entity.LoginHistory time Ljava/util/Date; _$6
+.field com.legendshop.model.entity.LoginHistory ip Ljava/lang/String; _$7
+.field com.legendshop.model.entity.LoginHistory userName Ljava/lang/String; _$8
+.field com.legendshop.model.entity.LoginHistory id Ljava/lang/Long; _$9
+.class com.legendshop.model.entity.Logo Logo
+.field com.legendshop.model.entity.Logo userName Ljava/lang/String; _$1
+.field com.legendshop.model.entity.Logo userId Ljava/lang/String; _$2
+.field com.legendshop.model.entity.Logo logoPic Ljava/lang/String; _$3
+.class com.legendshop.model.entity.Menu Menu
+.field com.legendshop.model.entity.Menu parentMenu Lcom/legendshop/model/entity/Menu; _$1
+.field com.legendshop.model.entity.Menu subMenu Ljava/util/Set<Lcom/legendshop/model/entity/Menu;>; _$2
+.field com.legendshop.model.entity.Menu level Ljava/lang/Integer; _$3
+.field com.legendshop.model.entity.Menu parentId Ljava/lang/Long; _$4
+.field com.legendshop.model.entity.Menu providedPlugin Ljava/lang/String; _$5
+.field com.legendshop.model.entity.Menu requiredAnyFunctions Ljava/util/List<Ljava/lang/String;>; _$6
+.field com.legendshop.model.entity.Menu action Ljava/lang/String; _$7
+.field com.legendshop.model.entity.Menu seq Ljava/lang/Integer; _$8
+.field com.legendshop.model.entity.Menu roleNameList Ljava/util/List<Ljava/lang/String;>; _$9
+.field com.legendshop.model.entity.Menu title Ljava/lang/String; _$10
+.field com.legendshop.model.entity.Menu label Ljava/lang/String; _$11
+.field com.legendshop.model.entity.Menu name Ljava/lang/String; _$12
+.field com.legendshop.model.entity.Menu menuId Ljava/lang/Long; _$13
+.class com.legendshop.model.entity.MenuComparator MenuComparator
+.class com.legendshop.model.entity.Message Message
+.field com.legendshop.model.entity.Message modifyDate Ljava/util/Date; _$1
+.field com.legendshop.model.entity.Message createDate Ljava/util/Date; _$2
+.field com.legendshop.model.entity.Message receiver Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Message sender Ljava/lang/String; _$4
+.field com.legendshop.model.entity.Message title Ljava/lang/String; _$5
+.field com.legendshop.model.entity.Message isdraft Ljava/lang/Integer; _$6
+.field com.legendshop.model.entity.Message isread Ljava/lang/Integer; _$7
+.field com.legendshop.model.entity.Message delByReceiver Ljava/lang/Integer; _$8
+.field com.legendshop.model.entity.Message delBySender Ljava/lang/Integer; _$9
+.field com.legendshop.model.entity.Message content Ljava/lang/String; _$10
+.field com.legendshop.model.entity.Message msgId Ljava/lang/String; _$11
+.class com.legendshop.model.entity.MyPersonInfo MyPersonInfo
+.field com.legendshop.model.entity.MyPersonInfo cityid Ljava/lang/String; _$1
+.field com.legendshop.model.entity.MyPersonInfo provinceid Ljava/lang/String; _$2
+.field com.legendshop.model.entity.MyPersonInfo areaid Ljava/lang/String; _$3
+.field com.legendshop.model.entity.MyPersonInfo qq Ljava/lang/String; _$4
+.field com.legendshop.model.entity.MyPersonInfo sex Ljava/lang/String; _$5
+.field com.legendshop.model.entity.MyPersonInfo birthDate Ljava/lang/String; _$6
+.field com.legendshop.model.entity.MyPersonInfo userAdds Ljava/lang/String; _$7
+.field com.legendshop.model.entity.MyPersonInfo idCard Ljava/lang/String; _$8
+.field com.legendshop.model.entity.MyPersonInfo userMobile Ljava/lang/String; _$9
+.field com.legendshop.model.entity.MyPersonInfo userMail Ljava/lang/String; _$10
+.field com.legendshop.model.entity.MyPersonInfo realName Ljava/lang/String; _$11
+.field com.legendshop.model.entity.MyPersonInfo userName Ljava/lang/String; _$12
+.field com.legendshop.model.entity.MyPersonInfo nickName Ljava/lang/String; _$13
+.field com.legendshop.model.entity.MyPersonInfo id Ljava/lang/String; _$14
+.class com.legendshop.model.entity.Myfavorite Myfavorite
+.field com.legendshop.model.entity.Myfavorite price Ljava/lang/Double; _$1
+.field com.legendshop.model.entity.Myfavorite cash Ljava/lang/Double; _$2
+.field com.legendshop.model.entity.Myfavorite buys Ljava/lang/Integer; _$3
+.field com.legendshop.model.entity.Myfavorite stocks Ljava/lang/Integer; _$4
+.field com.legendshop.model.entity.Myfavorite comments Ljava/lang/Integer; _$5
+.field com.legendshop.model.entity.Myfavorite pic Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Myfavorite userName Ljava/lang/String; _$7
+.field com.legendshop.model.entity.Myfavorite userId Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Myfavorite addtime Ljava/util/Date; _$9
+.field com.legendshop.model.entity.Myfavorite prodName Ljava/lang/String; _$10
+.field com.legendshop.model.entity.Myfavorite prodId Ljava/lang/Long; _$11
+.field com.legendshop.model.entity.Myfavorite id Ljava/lang/String; _$12
+.class com.legendshop.model.entity.Myleague Myleague
+.field com.legendshop.model.entity.Myleague addtime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.Myleague status Ljava/lang/Integer; _$2
+.field com.legendshop.model.entity.Myleague area Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Myleague city Ljava/lang/String; _$4
+.field com.legendshop.model.entity.Myleague province Ljava/lang/String; _$5
+.field com.legendshop.model.entity.Myleague banner Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Myleague displayOrder Ljava/lang/Integer; _$7
+.field com.legendshop.model.entity.Myleague friendName Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Myleague friendId Ljava/lang/String; _$9
+.field com.legendshop.model.entity.Myleague userId Ljava/lang/String; _$10
+.field com.legendshop.model.entity.Myleague id Ljava/lang/Long; _$11
+.class com.legendshop.model.entity.News News
+.field com.legendshop.model.entity.News newsBrief Ljava/lang/String; _$1
+.field com.legendshop.model.entity.News userName Ljava/lang/String; _$2
+.field com.legendshop.model.entity.News userId Ljava/lang/String; _$3
+.field com.legendshop.model.entity.News highLine Ljava/lang/Integer; _$4
+.field com.legendshop.model.entity.News position Ljava/lang/Integer; _$5
+.field com.legendshop.model.entity.News status Ljava/lang/Integer; _$6
+.field com.legendshop.model.entity.News newsDate Ljava/util/Date; _$7
+.field com.legendshop.model.entity.News newsContent Ljava/lang/String; _$8
+.field com.legendshop.model.entity.News newsTitle Ljava/lang/String; _$9
+.field com.legendshop.model.entity.News sortName Ljava/lang/String; _$10
+.field com.legendshop.model.entity.News sortId Ljava/lang/Long; _$11
+.field com.legendshop.model.entity.News sort Lcom/legendshop/model/entity/Sort; _$12
+.field com.legendshop.model.entity.News newsCategoryName Ljava/lang/String; _$13
+.field com.legendshop.model.entity.News newsCategory Lcom/legendshop/model/entity/NewsCategory; _$14
+.field com.legendshop.model.entity.News newsCategoryId Ljava/lang/Long; _$15
+.field com.legendshop.model.entity.News newsId Ljava/lang/Long; _$16
+.class com.legendshop.model.entity.NewsCategory NewsCategory
+.field com.legendshop.model.entity.NewsCategory userName Ljava/lang/String; _$1
+.field com.legendshop.model.entity.NewsCategory userId Ljava/lang/String; _$2
+.field com.legendshop.model.entity.NewsCategory newsCategoryDate Ljava/util/Date; _$3
+.field com.legendshop.model.entity.NewsCategory seq Ljava/lang/Integer; _$4
+.field com.legendshop.model.entity.NewsCategory status Ljava/lang/Short; _$5
+.field com.legendshop.model.entity.NewsCategory newsCategoryName Ljava/lang/String; _$6
+.field com.legendshop.model.entity.NewsCategory newsCategoryId Ljava/lang/Long; _$7
+.class com.legendshop.model.entity.Sort Sort
+.field com.legendshop.model.entity.Sort nsort Ljava/util/Set<Lcom/legendshop/model/entity/Nsort;>; _$1
+.field com.legendshop.model.entity.Sort brandList Ljava/util/List<Lcom/legendshop/model/entity/Brand;>; _$2
+.field com.legendshop.model.entity.Sort navigationMenu Ljava/lang/Integer; _$3
+.field com.legendshop.model.entity.Sort headerMenu Ljava/lang/Integer; _$4
+.field com.legendshop.model.entity.Sort seq Ljava/lang/Integer; _$5
+.field com.legendshop.model.entity.Sort userName Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Sort sortType Ljava/lang/String; _$7
+.field com.legendshop.model.entity.Sort userId Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Sort picture Ljava/lang/String; _$9
+.field com.legendshop.model.entity.Sort sortName Ljava/lang/String; _$10
+.field com.legendshop.model.entity.Sort sortId Ljava/lang/Long; _$11
+.class com.legendshop.model.entity.Nsort Nsort
+.field com.legendshop.model.entity.Nsort subSort Ljava/util/Set<Lcom/legendshop/model/entity/Nsort;>; _$1
+.field com.legendshop.model.entity.Nsort sortDeputy Ljava/lang/Integer; _$2
+.field com.legendshop.model.entity.Nsort seq Ljava/lang/Integer; _$3
+.field com.legendshop.model.entity.Nsort parent Lcom/legendshop/model/entity/Nsort; _$4
+.field com.legendshop.model.entity.Nsort parentNsortId Ljava/lang/Long; _$5
+.field com.legendshop.model.entity.Nsort sortName Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Nsort sortId Ljava/lang/Long; _$7
+.field com.legendshop.model.entity.Nsort nsortName Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Nsort nsortId Ljava/lang/Long; _$9
+.class com.legendshop.model.entity.NewsTitle NewsTitle
+.field com.legendshop.model.entity.NewsTitle newsTitle Ljava/lang/String; _$1
+.field com.legendshop.model.entity.NewsTitle newsId Ljava/lang/Long; _$2
+.class com.legendshop.model.entity.NsortBrand NsortBrand
+.field com.legendshop.model.entity.NsortBrand userName Ljava/lang/String; _$1
+.field com.legendshop.model.entity.NsortBrand id Lcom/legendshop/model/entity/NsortBrandId; _$2
+.class com.legendshop.model.entity.NsortBrandId NsortBrandId
+.field com.legendshop.model.entity.NsortBrandId nsortId Ljava/lang/Long; _$1
+.field com.legendshop.model.entity.NsortBrandId brandId Ljava/lang/Long; _$2
+.class com.legendshop.model.entity.NsortComparator NsortComparator
+.class com.legendshop.model.entity.PagerForm PagerForm
+.field com.legendshop.model.entity.PagerForm curPageNO Ljava/lang/String; _$1
+.class com.legendshop.model.entity.Partner Partner
+.field com.legendshop.model.entity.Partner createTime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.Partner modifyTime Ljava/util/Date; _$2
+.field com.legendshop.model.entity.Partner commentBad Ljava/lang/Integer; _$3
+.field com.legendshop.model.entity.Partner commentNone Ljava/lang/Integer; _$4
+.field com.legendshop.model.entity.Partner commentGood Ljava/lang/Integer; _$5
+.field com.legendshop.model.entity.Partner display Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Partner status Ljava/lang/String; _$7
+.field com.legendshop.model.entity.Partner showInfo Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Partner mobile Ljava/lang/String; _$9
+.field com.legendshop.model.entity.Partner other Ljava/lang/String; _$10
+.field com.legendshop.model.entity.Partner address Ljava/lang/String; _$11
+.field com.legendshop.model.entity.Partner phone Ljava/lang/String; _$12
+.field com.legendshop.model.entity.Partner image2 Ljava/lang/String; _$13
+.field com.legendshop.model.entity.Partner image1 Ljava/lang/String; _$14
+.field com.legendshop.model.entity.Partner image Ljava/lang/String; _$15
+.field com.legendshop.model.entity.Partner contact Ljava/lang/String; _$16
+.field com.legendshop.model.entity.Partner location Ljava/lang/String; _$17
+.field com.legendshop.model.entity.Partner bankUser Ljava/lang/String; _$18
+.field com.legendshop.model.entity.Partner bankNo Ljava/lang/String; _$19
+.field com.legendshop.model.entity.Partner bankName Ljava/lang/String; _$20
+.field com.legendshop.model.entity.Partner shopId Ljava/lang/Long; _$21
+.field com.legendshop.model.entity.Partner userName Ljava/lang/String; _$22
+.field com.legendshop.model.entity.Partner userId Ljava/lang/String; _$23
+.field com.legendshop.model.entity.Partner homepage Ljava/lang/String; _$24
+.field com.legendshop.model.entity.Partner title Ljava/lang/String; _$25
+.field com.legendshop.model.entity.Partner password Ljava/lang/String; _$26
+.field com.legendshop.model.entity.Partner partnerName Ljava/lang/String; _$27
+.field com.legendshop.model.entity.Partner partnerId Ljava/lang/Long; _$28
+.class com.legendshop.model.entity.PayType PayType
+.field com.legendshop.model.entity.PayType memo Ljava/lang/String; _$1
+.field com.legendshop.model.entity.PayType sellerEmail Ljava/lang/String; _$2
+.field com.legendshop.model.entity.PayType validateKey Ljava/lang/String; _$3
+.field com.legendshop.model.entity.PayType partner Ljava/lang/String; _$4
+.field com.legendshop.model.entity.PayType payTypeName Ljava/lang/String; _$5
+.field com.legendshop.model.entity.PayType payTypeId Ljava/lang/String; _$6
+.field com.legendshop.model.entity.PayType userName Ljava/lang/String; _$7
+.field com.legendshop.model.entity.PayType payId Ljava/lang/Long; _$8
+.class com.legendshop.model.entity.Permission Permission
+.field com.legendshop.model.entity.Permission id Lcom/legendshop/model/entity/PerssionId; _$1
+.class com.legendshop.model.entity.PerssionId PerssionId
+.field com.legendshop.model.entity.PerssionId functionId Ljava/lang/String; _$1
+.field com.legendshop.model.entity.PerssionId roleId Ljava/lang/String; _$2
+.class com.legendshop.model.entity.ProductComment ProductComment
+.field com.legendshop.model.entity.ProductComment buyTime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.ProductComment defect Ljava/lang/String; _$2
+.field com.legendshop.model.entity.ProductComment advtge Ljava/lang/String; _$3
+.field com.legendshop.model.entity.ProductComment prodName Ljava/lang/String; _$4
+.field com.legendshop.model.entity.ProductComment replyTime Ljava/util/Date; _$5
+.field com.legendshop.model.entity.ProductComment replyName Ljava/lang/String; _$6
+.field com.legendshop.model.entity.ProductComment replyContent Ljava/lang/String; _$7
+.field com.legendshop.model.entity.ProductComment score Ljava/lang/Integer; _$8
+.field com.legendshop.model.entity.ProductComment postip Ljava/lang/String; _$9
+.field com.legendshop.model.entity.ProductComment addtime Ljava/util/Date; _$10
+.field com.legendshop.model.entity.ProductComment content Ljava/lang/String; _$11
+.field com.legendshop.model.entity.ProductComment title Ljava/lang/String; _$12
+.field com.legendshop.model.entity.ProductComment userName Ljava/lang/String; _$13
+.field com.legendshop.model.entity.ProductComment ownerName Ljava/lang/String; _$14
+.field com.legendshop.model.entity.ProductComment prodId Ljava/lang/Long; _$15
+.field com.legendshop.model.entity.ProductComment id Ljava/lang/Long; _$16
+.class com.legendshop.model.entity.ProductCommentCategory ProductCommentCategory
+.field com.legendshop.model.entity.ProductCommentCategory lowRate D _$1
+.field com.legendshop.model.entity.ProductCommentCategory mediumRate D _$2
+.field com.legendshop.model.entity.ProductCommentCategory highRate D _$3
+.field com.legendshop.model.entity.ProductCommentCategory low I _$4
+.field com.legendshop.model.entity.ProductCommentCategory medium I _$5
+.field com.legendshop.model.entity.ProductCommentCategory high I _$6
+.field com.legendshop.model.entity.ProductCommentCategory total I _$7
+.field com.legendshop.model.entity.ProductCommentCategory prodId Ljava/lang/Long; _$8
+.class com.legendshop.model.entity.ProductConsult ProductConsult
+.field com.legendshop.model.entity.ProductConsult replyed Ljava/lang/Integer; _$1
+.field com.legendshop.model.entity.ProductConsult gradeName Ljava/lang/String; _$2
+.field com.legendshop.model.entity.ProductConsult endTime Ljava/util/Date; _$3
+.field com.legendshop.model.entity.ProductConsult startTime Ljava/util/Date; _$4
+.field com.legendshop.model.entity.ProductConsult ansUserName Ljava/lang/String; _$5
+.field com.legendshop.model.entity.ProductConsult askUserName Ljava/lang/String; _$6
+.field com.legendshop.model.entity.ProductConsult answertime Ljava/util/Date; _$7
+.field com.legendshop.model.entity.ProductConsult postip Ljava/lang/String; _$8
+.field com.legendshop.model.entity.ProductConsult recDate Ljava/util/Date; _$9
+.field com.legendshop.model.entity.ProductConsult answer Ljava/lang/String; _$10
+.field com.legendshop.model.entity.ProductConsult content Ljava/lang/String; _$11
+.field com.legendshop.model.entity.ProductConsult userName Ljava/lang/String; _$12
+.field com.legendshop.model.entity.ProductConsult userId Ljava/lang/String; _$13
+.field com.legendshop.model.entity.ProductConsult prodName Ljava/lang/String; _$14
+.field com.legendshop.model.entity.ProductConsult prodId Ljava/lang/Long; _$15
+.field com.legendshop.model.entity.ProductConsult pointType Ljava/lang/Integer; _$16
+.field com.legendshop.model.entity.ProductConsult consId Ljava/lang/Long; _$17
+.class com.legendshop.model.entity.ProductDetail ProductDetail
+.field com.legendshop.model.entity.ProductDetail relProds Ljava/util/List<Lcom/legendshop/model/entity/Product;>; _$1
+.field com.legendshop.model.entity.ProductDetail prodPics Ljava/util/List<Lcom/legendshop/model/entity/ImgFile;>; _$2
+.field com.legendshop.model.entity.ProductDetail brandName Ljava/lang/String; _$3
+.field com.legendshop.model.entity.ProductDetail subNsortName Ljava/lang/String; _$4
+.field com.legendshop.model.entity.ProductDetail nsortName Ljava/lang/String; _$5
+.field com.legendshop.model.entity.ProductDetail sortName Ljava/lang/String; _$6
+.class com.legendshop.model.entity.ProductProperty ProductProperty
+.field com.legendshop.model.entity.ProductProperty productPropertyValueList Ljava/util/List<Lcom/legendshop/model/entity/ProductPropertyValue;>; _$1
+.field com.legendshop.model.entity.ProductProperty isInputProp Ljava/lang/Short; _$2
+.field com.legendshop.model.entity.ProductProperty isForSearch Ljava/lang/Short; _$3
+.field com.legendshop.model.entity.ProductProperty isSaleProp Ljava/lang/Short; _$4
+.field com.legendshop.model.entity.ProductProperty isParamProp Ljava/lang/Short; _$5
+.field com.legendshop.model.entity.ProductProperty isKeyProp Ljava/lang/Short; _$6
+.field com.legendshop.model.entity.ProductProperty recDate Ljava/util/Date; _$7
+.field com.legendshop.model.entity.ProductProperty modifyDate Ljava/util/Date; _$8
+.field com.legendshop.model.entity.ProductProperty type Ljava/lang/Short; _$9
+.field com.legendshop.model.entity.ProductProperty status Ljava/lang/Short; _$10
+.field com.legendshop.model.entity.ProductProperty sequence Ljava/lang/Long; _$11
+.field com.legendshop.model.entity.ProductProperty isMulti Ljava/lang/Short; _$12
+.field com.legendshop.model.entity.ProductProperty isRequired Ljava/lang/Short; _$13
+.field com.legendshop.model.entity.ProductProperty memo Ljava/lang/String; _$14
+.field com.legendshop.model.entity.ProductProperty sortId Ljava/lang/Long; _$15
+.field com.legendshop.model.entity.ProductProperty propName Ljava/lang/String; _$16
+.field com.legendshop.model.entity.ProductProperty propId Ljava/lang/Long; _$17
+.class com.legendshop.model.entity.ProductPropertyValue ProductPropertyValue
+.field com.legendshop.model.entity.ProductPropertyValue recDate Ljava/util/Date; _$1
+.field com.legendshop.model.entity.ProductPropertyValue modifyDate Ljava/util/Date; _$2
+.field com.legendshop.model.entity.ProductPropertyValue sequence Ljava/lang/Long; _$3
+.field com.legendshop.model.entity.ProductPropertyValue pic Ljava/lang/String; _$4
+.field com.legendshop.model.entity.ProductPropertyValue status Ljava/lang/Short; _$5
+.field com.legendshop.model.entity.ProductPropertyValue name Ljava/lang/String; _$6
+.field com.legendshop.model.entity.ProductPropertyValue propId Ljava/lang/Long; _$7
+.field com.legendshop.model.entity.ProductPropertyValue valueId Ljava/lang/Long; _$8
+.class com.legendshop.model.entity.ProductSpec ProductSpec
+.field com.legendshop.model.entity.ProductSpec pic Ljava/lang/String; _$1
+.field com.legendshop.model.entity.ProductSpec recDate Ljava/util/Date; _$2
+.field com.legendshop.model.entity.ProductSpec modifyDate Ljava/util/Date; _$3
+.field com.legendshop.model.entity.ProductSpec skuId Ljava/lang/Long; _$4
+.field com.legendshop.model.entity.ProductSpec isSku Ljava/lang/Short; _$5
+.field com.legendshop.model.entity.ProductSpec valueId Ljava/lang/Long; _$6
+.field com.legendshop.model.entity.ProductSpec propId Ljava/lang/Long; _$7
+.field com.legendshop.model.entity.ProductSpec productId Ljava/lang/Long; _$8
+.field com.legendshop.model.entity.ProductSpec prodSpecId Ljava/lang/Long; _$9
+.class com.legendshop.model.entity.Province Province
+.field com.legendshop.model.entity.Province province Ljava/lang/String; _$1
+.field com.legendshop.model.entity.Province provinceid Ljava/lang/String; _$2
+.field com.legendshop.model.entity.Province id Ljava/lang/String; _$3
+.class com.legendshop.model.entity.Pub Pub
+.field com.legendshop.model.entity.Pub isValid Z _$1
+.field com.legendshop.model.entity.Pub status Ljava/lang/Integer; _$2
+.field com.legendshop.model.entity.Pub userName Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Pub userId Ljava/lang/String; _$4
+.field com.legendshop.model.entity.Pub endDate Ljava/util/Date; _$5
+.field com.legendshop.model.entity.Pub startDate Ljava/util/Date; _$6
+.field com.legendshop.model.entity.Pub recDate Ljava/util/Date; _$7
+.field com.legendshop.model.entity.Pub msg Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Pub title Ljava/lang/String; _$9
+.field com.legendshop.model.entity.Pub id Ljava/lang/Long; _$10
+.class com.legendshop.model.entity.RelProduct RelProduct
+.field com.legendshop.model.entity.RelProduct userName Ljava/lang/String; _$1
+.field com.legendshop.model.entity.RelProduct recDate Ljava/util/Date; _$2
+.field com.legendshop.model.entity.RelProduct relProdName Ljava/lang/String; _$3
+.field com.legendshop.model.entity.RelProduct relProdId Ljava/lang/Long; _$4
+.field com.legendshop.model.entity.RelProduct prodId Ljava/lang/Long; _$5
+.field com.legendshop.model.entity.RelProduct relId Ljava/lang/Long; _$6
+.class com.legendshop.model.entity.RoleMenu RoleMenu
+.field com.legendshop.model.entity.RoleMenu roleName Ljava/lang/String; _$1
+.field com.legendshop.model.entity.RoleMenu roleId Ljava/lang/String; _$2
+.field com.legendshop.model.entity.RoleMenu menuId Ljava/lang/Long; _$3
+.field com.legendshop.model.entity.RoleMenu rmId Ljava/lang/Long; _$4
+.class com.legendshop.model.entity.Score Score
+.field com.legendshop.model.entity.Score recDate Ljava/util/Date; _$1
+.field com.legendshop.model.entity.Score userName Ljava/lang/String; _$2
+.field com.legendshop.model.entity.Score scoreType Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Score score Ljava/lang/Long; _$4
+.field com.legendshop.model.entity.Score subId Ljava/lang/Long; _$5
+.field com.legendshop.model.entity.Score scoreId Ljava/lang/Long; _$6
+.class com.legendshop.model.entity.ShopDetail ShopDetail
+.class com.legendshop.model.entity.ShopGrade ShopGrade
+.field com.legendshop.model.entity.ShopGrade maxProd Ljava/lang/Integer; _$1
+.field com.legendshop.model.entity.ShopGrade maxNsortSize Ljava/lang/Integer; _$2
+.field com.legendshop.model.entity.ShopGrade maxSortSize Ljava/lang/Integer; _$3
+.field com.legendshop.model.entity.ShopGrade name Ljava/lang/String; _$4
+.field com.legendshop.model.entity.ShopGrade gradeId Ljava/lang/Integer; _$5
+.class com.legendshop.model.entity.Sku Sku
+.field com.legendshop.model.entity.Sku recDate Ljava/util/Date; _$1
+.field com.legendshop.model.entity.Sku modifyDate Ljava/util/Date; _$2
+.field com.legendshop.model.entity.Sku outerId Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Sku skuDeliveryTime Ljava/util/Date; _$4
+.field com.legendshop.model.entity.Sku status Ljava/lang/Short; _$5
+.field com.legendshop.model.entity.Sku name Ljava/lang/String; _$6
+.field com.legendshop.model.entity.Sku actualStocks Ljava/lang/Long; _$7
+.field com.legendshop.model.entity.Sku stocks Ljava/lang/Long; _$8
+.field com.legendshop.model.entity.Sku price Ljava/lang/Float; _$9
+.field com.legendshop.model.entity.Sku properties Ljava/lang/String; _$10
+.field com.legendshop.model.entity.Sku prodId Ljava/lang/Long; _$11
+.field com.legendshop.model.entity.Sku skuId Ljava/lang/Long; _$12
+.class com.legendshop.model.entity.Sub Sub
+.field com.legendshop.model.entity.Sub tradeNo Ljava/lang/String; _$1
+.field com.legendshop.model.entity.Sub deliveryFlowId Ljava/lang/String; _$2
+.field com.legendshop.model.entity.Sub dvyTypeId Ljava/lang/Long; _$3
+.field com.legendshop.model.entity.Sub score Ljava/lang/Long; _$4
+.field com.legendshop.model.entity.Sub scoreId Ljava/lang/Long; _$5
+.field com.legendshop.model.entity.Sub payType Ljava/util/List<Lcom/legendshop/model/entity/PayType;>; _$6
+.field com.legendshop.model.entity.Sub basket Ljava/util/List<Lcom/legendshop/model/entity/Basket;>; _$7
+.field com.legendshop.model.entity.Sub shopName Ljava/lang/String; _$8
+.field com.legendshop.model.entity.Sub other Ljava/lang/String; _$9
+.field com.legendshop.model.entity.Sub subPost Ljava/lang/String; _$10
+.field com.legendshop.model.entity.Sub subAdds Ljava/lang/String; _$11
+.field com.legendshop.model.entity.Sub payTypeName Ljava/lang/String; _$12
+.field com.legendshop.model.entity.Sub status Ljava/lang/Integer; _$13
+.field com.legendshop.model.entity.Sub payTypeId Ljava/lang/String; _$14
+.field com.legendshop.model.entity.Sub payId Ljava/lang/Long; _$15
+.field com.legendshop.model.entity.Sub subTel Ljava/lang/String; _$16
+.field com.legendshop.model.entity.Sub subMail Ljava/lang/String; _$17
+.field com.legendshop.model.entity.Sub actualTotal Ljava/lang/Double; _$18
+.field com.legendshop.model.entity.Sub total Ljava/lang/Double; _$19
+.field com.legendshop.model.entity.Sub subType Ljava/lang/String; _$20
+.field com.legendshop.model.entity.Sub subCheck Ljava/lang/String; _$21
+.field com.legendshop.model.entity.Sub subNumber Ljava/lang/String; _$22
+.field com.legendshop.model.entity.Sub updateDate Ljava/util/Date; _$23
+.field com.legendshop.model.entity.Sub payDate Ljava/util/Date; _$24
+.field com.legendshop.model.entity.Sub subDate Ljava/util/Date; _$25
+.field com.legendshop.model.entity.Sub orderName Ljava/lang/String; _$26
+.field com.legendshop.model.entity.Sub userName Ljava/lang/String; _$27
+.field com.legendshop.model.entity.Sub prodName Ljava/lang/String; _$28
+.field com.legendshop.model.entity.Sub subId Ljava/lang/Long; _$29
+.class com.legendshop.model.entity.SubHistory SubHistory
+.field com.legendshop.model.entity.SubHistory deliveryFlowId Ljava/lang/String; _$1
+.field com.legendshop.model.entity.SubHistory dvyTypeId Ljava/lang/Long; _$2
+.field com.legendshop.model.entity.SubHistory tradeNo Ljava/lang/String; _$3
+.field com.legendshop.model.entity.SubHistory subAction Ljava/lang/String; _$4
+.field com.legendshop.model.entity.SubHistory updateTime Ljava/util/Date; _$5
+.field com.legendshop.model.entity.SubHistory updateUser Ljava/lang/String; _$6
+.field com.legendshop.model.entity.SubHistory score Ljava/lang/Long; _$7
+.field com.legendshop.model.entity.SubHistory scoreId Ljava/lang/Long; _$8
+.field com.legendshop.model.entity.SubHistory status Ljava/lang/Integer; _$9
+.field com.legendshop.model.entity.SubHistory shopName Ljava/lang/String; _$10
+.field com.legendshop.model.entity.SubHistory other Ljava/lang/String; _$11
+.field com.legendshop.model.entity.SubHistory subPost Ljava/lang/String; _$12
+.field com.legendshop.model.entity.SubHistory subAdds Ljava/lang/String; _$13
+.field com.legendshop.model.entity.SubHistory payTypeName Ljava/lang/String; _$14
+.field com.legendshop.model.entity.SubHistory payTypeId Ljava/lang/String; _$15
+.field com.legendshop.model.entity.SubHistory payId Ljava/lang/Long; _$16
+.field com.legendshop.model.entity.SubHistory subTel Ljava/lang/String; _$17
+.field com.legendshop.model.entity.SubHistory subMail Ljava/lang/String; _$18
+.field com.legendshop.model.entity.SubHistory actualTotal Ljava/lang/Double; _$19
+.field com.legendshop.model.entity.SubHistory total Ljava/lang/Double; _$20
+.field com.legendshop.model.entity.SubHistory subType Ljava/lang/String; _$21
+.field com.legendshop.model.entity.SubHistory subCheck Ljava/lang/String; _$22
+.field com.legendshop.model.entity.SubHistory subNumber Ljava/lang/String; _$23
+.field com.legendshop.model.entity.SubHistory updateDate Ljava/util/Date; _$24
+.field com.legendshop.model.entity.SubHistory payDate Ljava/util/Date; _$25
+.field com.legendshop.model.entity.SubHistory subDate Ljava/util/Date; _$26
+.field com.legendshop.model.entity.SubHistory orderName Ljava/lang/String; _$27
+.field com.legendshop.model.entity.SubHistory userName Ljava/lang/String; _$28
+.field com.legendshop.model.entity.SubHistory prodName Ljava/lang/String; _$29
+.field com.legendshop.model.entity.SubHistory subId Ljava/lang/Long; _$30
+.field com.legendshop.model.entity.SubHistory subHistId Ljava/lang/Long; _$31
+.class com.legendshop.model.entity.SystemParameter SystemParameter
+.field com.legendshop.model.entity.SystemParameter groupId Ljava/lang/String; _$1
+.field com.legendshop.model.entity.SystemParameter displayOrder Ljava/lang/Integer; _$2
+.field com.legendshop.model.entity.SystemParameter changeOnline Ljava/lang/String; _$3
+.field com.legendshop.model.entity.SystemParameter optional Ljava/lang/String; _$4
+.field com.legendshop.model.entity.SystemParameter type Ljava/lang/String; _$5
+.field com.legendshop.model.entity.SystemParameter memo Ljava/lang/String; _$6
+.field com.legendshop.model.entity.SystemParameter value Ljava/lang/String; _$7
+.field com.legendshop.model.entity.SystemParameter name Ljava/lang/String; _$8
+.class com.legendshop.model.entity.Tag Tag
+.field com.legendshop.model.entity.Tag commendProdList Ljava/util/List<Lcom/legendshop/model/entity/Product;>; _$1
+.field com.legendshop.model.entity.Tag advertisementList Ljava/util/List<Lcom/legendshop/model/entity/Advertisement;>; _$2
+.field com.legendshop.model.entity.Tag userName Ljava/lang/String; _$3
+.field com.legendshop.model.entity.Tag userId Ljava/lang/String; _$4
+.field com.legendshop.model.entity.Tag createTime Ljava/util/Date; _$5
+.field com.legendshop.model.entity.Tag status Ljava/lang/Integer; _$6
+.field com.legendshop.model.entity.Tag type Ljava/lang/String; _$7
+.field com.legendshop.model.entity.Tag newsTitles Ljava/util/List<Lcom/legendshop/model/entity/NewsTitle;>; _$8
+.field com.legendshop.model.entity.Tag newsCategoryName Ljava/lang/String; _$9
+.field com.legendshop.model.entity.Tag newsCategoryId Ljava/lang/Long; _$10
+.field com.legendshop.model.entity.Tag sortName Ljava/lang/String; _$11
+.field com.legendshop.model.entity.Tag sort Lcom/legendshop/model/entity/Sort; _$12
+.field com.legendshop.model.entity.Tag sortId Ljava/lang/Long; _$13
+.field com.legendshop.model.entity.Tag name Ljava/lang/String; _$14
+.field com.legendshop.model.entity.Tag tagId Ljava/lang/Long; _$15
+.class com.legendshop.model.entity.TagMap TagMap
+.field com.legendshop.model.entity.TagMap endTime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.TagMap startTime Ljava/util/Date; _$2
+.field com.legendshop.model.entity.TagMap type Ljava/lang/String; _$3
+.field com.legendshop.model.entity.TagMap referId Ljava/lang/Long; _$4
+.field com.legendshop.model.entity.TagMap tagId Ljava/lang/Long; _$5
+.field com.legendshop.model.entity.TagMap tagMapId Ljava/lang/Long; _$6
+.class com.legendshop.model.entity.User User
+.field com.legendshop.model.entity.User note Ljava/lang/String; _$1
+.field com.legendshop.model.entity.User enabled Ljava/lang/String; _$2
+.field com.legendshop.model.entity.User passwordag Ljava/lang/String; _$3
+.field com.legendshop.model.entity.User password Ljava/lang/String; _$4
+.field com.legendshop.model.entity.User name Ljava/lang/String; _$5
+.field com.legendshop.model.entity.User id Ljava/lang/String; _$6
+.class com.legendshop.model.entity.UserAddress UserAddress
+.field com.legendshop.model.entity.UserAddress createTime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.UserAddress commonAddr Ljava/lang/String; _$2
+.field com.legendshop.model.entity.UserAddress status Ljava/lang/String; _$3
+.field com.legendshop.model.entity.UserAddress email Ljava/lang/String; _$4
+.field com.legendshop.model.entity.UserAddress telphone Ljava/lang/String; _$5
+.field com.legendshop.model.entity.UserAddress mobile Ljava/lang/String; _$6
+.field com.legendshop.model.entity.UserAddress cityId Ljava/lang/Integer; _$7
+.field com.legendshop.model.entity.UserAddress provinceId Ljava/lang/Integer; _$8
+.field com.legendshop.model.entity.UserAddress subPost Ljava/lang/String; _$9
+.field com.legendshop.model.entity.UserAddress subAdds Ljava/lang/String; _$10
+.field com.legendshop.model.entity.UserAddress receiver Ljava/lang/String; _$11
+.field com.legendshop.model.entity.UserAddress userName Ljava/lang/String; _$12
+.field com.legendshop.model.entity.UserAddress userId Ljava/lang/String; _$13
+.field com.legendshop.model.entity.UserAddress addrId Ljava/lang/Long; _$14
+.class com.legendshop.model.entity.UserComment UserComment
+.field com.legendshop.model.entity.UserComment status Ljava/lang/Integer; _$1
+.field com.legendshop.model.entity.UserComment postip Ljava/lang/String; _$2
+.field com.legendshop.model.entity.UserComment answertime Ljava/util/Date; _$3
+.field com.legendshop.model.entity.UserComment recDate Ljava/util/Date; _$4
+.field com.legendshop.model.entity.UserComment answer Ljava/lang/String; _$5
+.field com.legendshop.model.entity.UserComment content Ljava/lang/String; _$6
+.field com.legendshop.model.entity.UserComment toUserName Ljava/lang/String; _$7
+.field com.legendshop.model.entity.UserComment yourName Ljava/lang/String; _$8
+.field com.legendshop.model.entity.UserComment userName Ljava/lang/String; _$9
+.field com.legendshop.model.entity.UserComment userId Ljava/lang/String; _$10
+.field com.legendshop.model.entity.UserComment commentType Ljava/lang/Integer; _$11
+.field com.legendshop.model.entity.UserComment id Ljava/lang/Long; _$12
+.class com.legendshop.model.entity.UserDetail UserDetail
+.field com.legendshop.model.entity.UserDetail idCard Ljava/lang/String; _$1
+.field com.legendshop.model.entity.UserDetail enabled Ljava/lang/String; _$2
+.field com.legendshop.model.entity.UserDetail defaultAddrId Ljava/lang/Long; _$3
+.field com.legendshop.model.entity.UserDetail userAddresses Ljava/util/Set<Lcom/legendshop/model/entity/UserAddress;>; _$4
+.field com.legendshop.model.entity.UserDetail totalConsume Ljava/lang/Double; _$5
+.field com.legendshop.model.entity.UserDetail totalCash Ljava/lang/Double; _$6
+.field com.legendshop.model.entity.UserDetail score Ljava/lang/Long; _$7
+.field com.legendshop.model.entity.UserDetail registerCode Ljava/lang/String; _$8
+.field com.legendshop.model.entity.UserDetail shopDetail Lcom/legendshop/model/entity/ShopDetail; _$9
+.field com.legendshop.model.entity.UserDetail shopId Ljava/lang/Long; _$10
+.field com.legendshop.model.entity.UserDetail userMobile Ljava/lang/String; _$11
+.field com.legendshop.model.entity.UserDetail birthDate Ljava/lang/String; _$12
+.field com.legendshop.model.entity.UserDetail sex Ljava/lang/String; _$13
+.field com.legendshop.model.entity.UserDetail password Ljava/lang/String; _$14
+.field com.legendshop.model.entity.UserDetail userMemo Ljava/lang/String; _$15
+.field com.legendshop.model.entity.UserDetail userLastip Ljava/lang/String; _$16
+.field com.legendshop.model.entity.UserDetail userLasttime Ljava/util/Date; _$17
+.field com.legendshop.model.entity.UserDetail userRegip Ljava/lang/String; _$18
+.field com.legendshop.model.entity.UserDetail userRegtime Ljava/util/Date; _$19
+.field com.legendshop.model.entity.UserDetail modifyTime Ljava/util/Date; _$20
+.field com.legendshop.model.entity.UserDetail fax Ljava/lang/String; _$21
+.field com.legendshop.model.entity.UserDetail qqList Ljava/util/List; _$22
+.field com.legendshop.model.entity.UserDetail qq Ljava/lang/String; _$23
+.field com.legendshop.model.entity.UserDetail msn Ljava/lang/String; _$24
+.field com.legendshop.model.entity.UserDetail userPostcode Ljava/lang/String; _$25
+.field com.legendshop.model.entity.UserDetail userTel Ljava/lang/String; _$26
+.field com.legendshop.model.entity.UserDetail userAdds Ljava/lang/String; _$27
+.field com.legendshop.model.entity.UserDetail userMail Ljava/lang/String; _$28
+.field com.legendshop.model.entity.UserDetail realName Ljava/lang/String; _$29
+.field com.legendshop.model.entity.UserDetail nickName Ljava/lang/String; _$30
+.field com.legendshop.model.entity.UserDetail userName Ljava/lang/String; _$31
+.field com.legendshop.model.entity.UserDetail gradeId Ljava/lang/Integer; _$32
+.field com.legendshop.model.entity.UserDetail userId Ljava/lang/String; _$33
+.class com.legendshop.model.entity.UserEvent UserEvent
+.field com.legendshop.model.entity.UserEvent entity Ljava/lang/Object; _$1
+.field com.legendshop.model.entity.UserEvent modifyUser Ljava/lang/String; _$2
+.field com.legendshop.model.entity.UserEvent endTime Ljava/util/Date; _$3
+.field com.legendshop.model.entity.UserEvent startTime Ljava/util/Date; _$4
+.field com.legendshop.model.entity.UserEvent createTime Ljava/util/Date; _$5
+.field com.legendshop.model.entity.UserEvent relateId Ljava/lang/String; _$6
+.field com.legendshop.model.entity.UserEvent relateData Ljava/lang/String; _$7
+.field com.legendshop.model.entity.UserEvent operation Ljava/lang/String; _$8
+.field com.legendshop.model.entity.UserEvent type Ljava/lang/String; _$9
+.field com.legendshop.model.entity.UserEvent userName Ljava/lang/String; _$10
+.field com.legendshop.model.entity.UserEvent userId Ljava/lang/String; _$11
+.field com.legendshop.model.entity.UserEvent eventId Ljava/lang/Long; _$12
+.class com.legendshop.model.entity.UserGrade UserGrade
+.field com.legendshop.model.entity.UserGrade memo Ljava/lang/String; _$1
+.field com.legendshop.model.entity.UserGrade score Ljava/lang/Integer; _$2
+.field com.legendshop.model.entity.UserGrade name Ljava/lang/String; _$3
+.field com.legendshop.model.entity.UserGrade gradeId Ljava/lang/Integer; _$4
+.class com.legendshop.model.entity.UserRole UserRole
+.field com.legendshop.model.entity.UserRole id Lcom/legendshop/model/entity/UserRoleId; _$1
+.class com.legendshop.model.entity.UserRoleId UserRoleId
+.field com.legendshop.model.entity.UserRoleId roleId Ljava/lang/String; _$1
+.field com.legendshop.model.entity.UserRoleId userId Ljava/lang/String; _$2
+.class com.legendshop.model.entity.VisitLog VisitLog
+.field com.legendshop.model.entity.VisitLog endTime Ljava/util/Date; _$1
+.field com.legendshop.model.entity.VisitLog startTime Ljava/util/Date; _$2
+.field com.legendshop.model.entity.VisitLog visitNum Ljava/lang/Integer; _$3
+.field com.legendshop.model.entity.VisitLog date Ljava/util/Date; _$4
+.field com.legendshop.model.entity.VisitLog page Ljava/lang/String; _$5
+.field com.legendshop.model.entity.VisitLog productId Ljava/lang/String; _$6
+.field com.legendshop.model.entity.VisitLog productName Ljava/lang/String; _$7
+.field com.legendshop.model.entity.VisitLog shopName Ljava/lang/String; _$8
+.field com.legendshop.model.entity.VisitLog userName Ljava/lang/String; _$9
+.field com.legendshop.model.entity.VisitLog area Ljava/lang/String; _$10
+.field com.legendshop.model.entity.VisitLog country Ljava/lang/String; _$11
+.field com.legendshop.model.entity.VisitLog ip Ljava/lang/String; _$12
+.field com.legendshop.model.entity.VisitLog visitId Ljava/lang/Long; _$13
+.class com.legendshop.model.template.Templet Templet
+.field com.legendshop.model.template.Templet styles Ljava/util/List<Lcom/legendshop/model/StatusKeyValueEntity;>; _$1
+.field com.legendshop.model.template.Templet languages Ljava/util/List<Lcom/legendshop/model/StatusKeyValueEntity;>; _$2
+.field com.legendshop.model.template.Templet id Ljava/lang/String; _$3
+.class com.legendshop.model.template.TempletEntity TempletEntity
+.field com.legendshop.model.template.TempletEntity backEndTempletMap Ljava/util/Map<Ljava/lang/String;Lcom/legendshop/model/template/Templet;>; _$1
+.field com.legendshop.model.template.TempletEntity frontEndTempletMap Ljava/util/Map<Ljava/lang/String;Lcom/legendshop/model/template/Templet;>; _$2
+.field com.legendshop.model.template.TempletEntity backEndTempletList Ljava/util/List<Lcom/legendshop/model/StatusKeyValueEntity;>; _$3
+.field com.legendshop.model.template.TempletEntity frontEndTempletList Ljava/util/List<Lcom/legendshop/model/StatusKeyValueEntity;>; _$4
+.class com.legendshop.model.visit.VisitHistory VisitHistory
+.method com.legendshop.model.visit.VisitHistory addvisitedShop (Lcom/legendshop/model/visit/VisitItem;)V _$1
+.method com.legendshop.model.visit.VisitHistory addvisitedProduct (Lcom/legendshop/model/visit/VisitItem;)V _$2
+.field com.legendshop.model.visit.VisitHistory visitedShop Ljava/util/LinkedList<Lcom/legendshop/model/visit/VisitItem;>; _$1
+.field com.legendshop.model.visit.VisitHistory visitedProd Ljava/util/LinkedList<Lcom/legendshop/model/visit/VisitItem;>; _$2
+.field com.legendshop.model.visit.VisitHistory maxLength Ljava/lang/Integer; _$3
+.class com.legendshop.model.visit.VisitItem VisitItem
+.field com.legendshop.model.visit.VisitItem pic Ljava/lang/String; _$1
+.field com.legendshop.model.visit.VisitItem date Ljava/util/Date; _$2
+.field com.legendshop.model.visit.VisitItem title Ljava/lang/String; _$3
+.field com.legendshop.model.visit.VisitItem name Ljava/lang/String; _$4
+.field com.legendshop.model.visit.VisitItem id Ljava/lang/String; _$5

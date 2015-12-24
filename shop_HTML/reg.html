@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)http://localhost/reg -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./js/jquery.js" type="text/javascript"></script>
+<script src="./js/top.js" type="text/javascript"></script>
+<script src="./js/club.js" type="text/javascript"></script>
+<link href="./css/css.css" rel="stylesheet" type="text/css">
+<link href="./css/pager.css" rel="stylesheet" type="text/css">
+<script>
+ 	 function form1_onsubmit() {
+      var words = document.getElementById("headerkeywordp");
+      if( words.value == null || words.value == '' || words.value == '关键字'){
+      	alert('关键字必填');
+      	words.focus();
+      	return false;
+      }
+      return true;
+ 	 }
+
+	function addMyLeague() {
+	    jQuery.post("/admin/myleague/addMyLeague", {siteName : ''},  function(retData){
+		       switch(retData){
+		       case 0:
+		    	   alert('新增加盟店成功') ;
+		    	   break;
+		       default:
+		    	   alert('新增加盟店将会生效，请稍等') ;	    	   	    	   		    	   	       
+		       }	      
+	    });
+	}
+	
+jQuery(document).ready(function(){
+				$.get("/topuserinfo", function(data){
+				  $('#user_info').html(data);
+				  	$.get("/clubRs", function(data){
+				  	//	alert( data );
+						 if(data) club(); //大于0才显示
+				 	});
+				   });
+});
+
+
+</script>
+
+<link href="./css/style_black.css" rel="stylesheet" type="text/css">
+<link href="./css/global_black.css" rel="stylesheet" type="text/css">
+
+<title>LegendShop多用户商城系统</title>
+<link rel="icon" href="http://localhost/favicon.ico" type="image/x-icon">
+<link href="http://localhost/favicon.ico" rel="icon" type="image/x-icon">
+<link href="http://localhost/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="http://localhost/favicon.png" rel="apple-touch-icon">
+<meta name="msapplication-TileImage" content="favicon.png">
+
+<meta name="description" content="home,LegendShop多用户商城系统, ">
+<meta name="keywords" content="home,LegendShop多用户商城系统, ">
+<meta name="keywords" content="购买啦商城">
+</head>
+<body>
+	<div id="mask"></div>
+	<div id="wrap"></div>
+
+  
+<link href="./css/header.css" rel="stylesheet" type="text/css">
+<div id="pagetop">
+	<div id="headertop">
+		<table width="954px" cellspacing="0" cellpadding="0" style="margin-bottom: 5px;" align="center" border="0">
+			<tbody><tr>
+				<td valign="top" align="left">
+					<div id="site-nav">
+						<ul class="quick-menu">
+							
+								<li class="first"><a href="http://localhost/all" target="_blank"><b>搜索首页</b></a></li>
+							
+							
+							
+							
+							<li class="favorite"><a href="http://localhost/reg#" onclick="javascript:bookmark(&#39;欢迎光临总站home - LegendShop购物商城&#39;,&#39;http://localhost/shop/home&#39;);">
+									收藏店铺
+							</a></li>
+							<li class="services menu-item last">
+								<div class="menu">
+									<a class="menu-hd" href="http://www.kingbloc.com/club" target="_blank">网站导航<b></b>
+									</a>
+
+									<!-- navigation start -->
+									<div class="menu-bd" style="WIDTH: 250px; HEIGHT: 250px; _width: 202px;">
+										<div class="menu-bd-panel">
+
+											
+												<dl>
+													<dt>
+														<b>站务公告</b>
+														</dt><dd>
+															
+																<a href="http://club.legendesign.net/forum.php?mod=forumdisplay&fid=2" target="_blank">公告专区</a>
+															
+																<a href="http://club.legendesign.net/forum.php?mod=forumdisplay&fid=44" target="_blank">市场活动</a>
+															
+														</dd>
+													
+												</dl>
+											
+												<dl>
+													<dt>
+														<b>商城系统交流</b>
+														</dt><dd>
+															
+																<a href="http://club.legendesign.net/forum.php?mod=forumdisplay&fid=42" target="_blank">发展建议</a>
+															
+																<a href="http://club.legendesign.net/forum.php?mod=forumdisplay&fid=40" target="_blank">BUG反馈</a>
+															
+																<a href="http://club.legendesign.net/forum.php?mod=forumdisplay&fid=41" target="_blank">商业服务支持</a>
+															
+														</dd>
+													
+												</dl>
+											
+												<dl>
+													<dt>
+														<b>程序发布与升级</b>
+														</dt><dd>
+															
+																<a href="http://club.legendesign.net/forum.php?mod=forumdisplay&fid=43" target="_blank">安装使用</a>
+															
+																<a href="http://club.legendesign.net/forum.php?mod=forumdisplay&fid=39" target="_blank">插件开发</a>
+															
+														</dd>
+													
+												</dl>
+											
+												<dl>
+													<dt>
+														<b>技术交流区</b>
+														</dt><dd>
+															
+																<a href="http://club.legendesign.net/forum.php?mod=forumdisplay&fid=47" target="_blank">sping</a>
+															
+																<a href="http://club.legendesign.net/forum.php?mod=forumdisplay&fid=48" target="_blank">hibernate</a>
+															
+																<a href="http://club.legendesign.net/forum.php?mod=forumdisplay&fid=49" target="_blank">企业应用</a>
+															
+																<a href="http://club.legendesign.net/forum.php?mod=forumdisplay&fid=50" target="_blank">前端技术</a>
+															
+														</dd>
+													
+												</dl>
+											
+										</div>
+										<s class="r"></s><s class="rt"></s><s class="lt"></s><s class="b" style="WIDTH: 169px"></s><s class="b b2" style="WIDTH: 169px"></s><s class="rb"></s><s class="lb"></s>
+									</div>
+
+									<!-- navigation end -->
+
+								</div>
+							</li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+</div>
+	<div id="header">
+		<div id="logo">
+			<a href="http://localhost/"> 
+					
+						<img style="Clear: Both; Border: 0px" src="./css/logo.png" height="65px">
+					
+					
+				
+			</a>
+		</div>
+		<div id="user_info">
+
+
+
+
+
+
+<div>
+	<ul id="topnews">
+		
+			<li><a href="http://localhost/news/103">退换货说明</a>
+			</li>
+		
+			<li><a href="http://localhost/news/89">快递运输</a>
+			</li>
+		
+			<li><a href="http://localhost/news/105">退款说明</a>
+			</li>
+		
+			<li><a href="http://localhost/news/185">快递运输资费说明</a>
+			</li>
+		
+			<li><a href="http://localhost/news/173">促销活动</a>
+			</li>
+		
+		
+	</ul>
+</div>
+<div>
+	<ul id="topnav">
+		
+			
+			
+				
+			
+			
+				<li><a href="http://localhost/admin/index"><b>后台管理 </b> </a></li>
+			
+			<li><a href="http://localhost/leaveword">站内信 </a></li>
+			<li><a href="http://localhost/p/order">我的订单 </a></li>
+		
+		<li class="navCartSum"><a href="http://localhost/p/buy">购物车 &nbsp;<span style="color: #FF5500; font-weight: bold;" id="basketTotalCount">0</span>&nbsp;件</a>
+		</li>
+		<li class="hl"><a href="http://localhost/allnews">新闻中心 </a></li>
+	</ul>
+</div>
+<div id="headerlogin">
+	<span> 
+			
+				<a href="http://localhost/p/myaccount" )="">root</a>
+				<a href="http://localhost/p/logout" target="_parent">[退出]
+				</a>
+			
+			
+		 <a href="./css/reg.html" class="n2">[注册]
+	</a>
+	</span>
+</div>
+</div>
+	</div>
+	<div id="headernav">
+		<ul>
+			
+			<!-- 团购	 -->
+			
+				<li><a href="http://localhost/group/index" target="_blank">团购 </a></li>
+			
+			<li class="n2"><a href="http://localhost/league">店铺列表 </a></li>
+			
+		</ul>
+		<ul class="nright">
+			
+				<li><a href="http://localhost/sort/55">家用电器</a>
+				</li>
+			
+				<li><a href="http://localhost/sort/56">手机数码</a>
+				</li>
+			
+				<li><a href="http://localhost/sort/57">电脑产品</a>
+				</li>
+			
+				<li><a href="http://localhost/sort/58">个护化妆</a>
+				</li>
+			
+				<li><a href="http://localhost/sort/59">日用百货</a>
+				</li>
+			
+				<li><a href="http://localhost/sort/60">时尚服饰</a>
+				</li>
+			
+		</ul>
+	</div>
+	<form method="post" onsubmit="return form1_onsubmit();" action="http://localhost/search" id="searchForm" name="searchForm" style="margin: 0px; padding: 0px">
+		<div id="searchwrapper">
+			<div id="qchannel">
+				<div id="headersearch">
+					<input type="hidden" id="curPageNOTop" name="curPageNOTop" value=""> <select name="sortId" id="headersearchcategory" style="margin-right: 3px">
+						<option id="allProduct" value="0">
+							所有商品分类
+						</option>
+						
+							
+								
+								
+									<option id="55" value="55" class="c">家用电器</option>
+								
+							
+						
+							
+								
+								
+									<option id="56" value="56" class="c">手机数码</option>
+								
+							
+						
+							
+								
+								
+									<option id="57" value="57" class="c">电脑产品</option>
+								
+							
+						
+							
+								
+								
+									<option id="58" value="58" class="c">个护化妆</option>
+								
+							
+						
+							
+								
+								
+									<option id="59" value="59" class="c">日用百货</option>
+								
+							
+						
+							
+								
+								
+									<option id="60" value="60" class="c">时尚服饰</option>
+								
+							
+						
+							
+								
+								
+									<option id="124" value="124" class="c">家装建材</option>
+								
+							
+						
+							
+								
+								
+									<option id="117" value="117" class="c">汽车用品</option>
+								
+							
+						
+							
+								
+								
+									<option id="118" value="118" class="c">母婴</option>
+								
+							
+						
+							
+								
+								
+									<option id="119" value="119" class="c">食品饮料</option>
+								
+							
+						
+							
+								
+								
+									<option id="120" value="120" class="c">保健食品</option>
+								
+							
+						
+							
+								
+								
+									<option id="123" value="123" class="c">珠宝首饰</option>
+								
+							
+						
+							
+								
+								
+									<option id="122" value="122" class="c">电脑办公、配件</option>
+								
+							
+						
+							
+								
+								
+									<option id="125" value="125" class="c">运动健康</option>
+								
+							
+						
+					</select> <input type="text" value="" name="keyword" id="headerkeywordp" class="input2" onmouseover="this.focus()" onblur="if (this.value ==&#39;&#39;) this.value=&#39;关键字&#39;" onfocus="this.select()" onclick="if (this.value==&#39;关键字&#39;) this.value=&#39;&#39;"> <input type="submit" value="搜索" class="input3" onmouseover="this.style.background=&#39;#99CC00&#39;" onmouseout="this.style.background=&#39;#FFCC00&#39;"> <a href="javascript:advanceSearch('')" style="margin: 6px"><font color="white">高级搜索 </font> </a>
+
+				</div>
+				<div id="topcatalog">
+					<h2>
+						<a href="http://localhost/reg#" onclick="javascript:bookmark(&#39;home - LegendShop多用户商城系统&#39;,&#39;http://localhost/shop/home&#39;);">
+							收藏本站
+						</a>
+					</h2>
+				</div>
+				<div>
+					<ul id="favourite">
+						<li><center>
+								<a href="http://localhost/shopcontact?shop=home" title="home在线客服">在线客服 </a>
+							</center></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</form>
+<div id="bodyer">
+ 
+
+
+
+<script src="./js/jquery.validate.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="./css/errorform.css">
+<table width="960px" cellspacing="0" cellpadding="0" class="tables">
+	<tbody><tr>
+		<td class="titlebg">用户注册</td>
+	</tr>
+	<tr>
+		<td height="2" bgcolor="#FFFFF6"><table width="100%" cellspacing="0" cellpadding="0" height="100%">
+				<tbody><tr>
+					<td align="left">
+						<form action="http://localhost/userReg" method="post" name="userRegForm" id="userRegForm" enctype="multipart/form-data" novalidate="novalidate">
+							<div style="margin-left: 100px">
+
+								
+							</div>
+							<br>
+							<table width="100%" id="regTab">
+								<tbody><tr>
+									<td width="33%" height="29"><div align="right">
+											<font color="#ff0000">*</font>
+											手机
+											：
+										</div></td>
+									<td width="67%"><div align="left">
+											<input class="input" type="text" name="name" id="name" maxlength="11" value=""> <input class="input" type="hidden" name="nickName" id="nickName" maxlength="20" value="" readonly="readonly"> <input class="input" type="hidden" name="userMail" id="userMail" value="" maxlength="50"> <span id="userAreardyExists"></span>
+											<div id="checkArea">
+												<h3>输入手机短信校验码</h3>
+												<input class="input" type="text" name="checkNo" id="checkNo" maxlength="4">
+											</div>
+										</div></td>
+								</tr>
+
+								<tr>
+									<td height="29"><div align="right">
+											<font color="#ff0000">*</font> 密码 ：
+										</div></td>
+									<td height="29"><div align="left">
+											<input class="input" type="text" name="password" id="password" maxlength="15"> <input class="input" type="hidden" name="password2" id="password2" readonly="readonly" maxlength="15"><span>不能少于6位！</span>
+										</div></td>
+								</tr>
+
+								
+								<tr>
+									<td colspan="2" width="100%">
+										<div id="shopDetail" style="display: none">
+											<table width="100%" cellpadding="0" cellspacing="0">
+												<tbody><tr>
+													<td colspan="2">
+														<div style="margin-left: 150px">
+															<li>请上传真实的身份证照片和身份证号码</li><li>如果是商家请上传营业执照</li><li>请填写真实店铺名称和地址</li>
+															
+																<li>开店用户真实姓名需要和身份证附件匹配，否则不能审核通过：</li>
+															
+														</div> <br>
+													</td>
+												</tr>
+												<tr>
+													<td width="33%" height="29"><div align="right">
+															<font color="#ff0000">*</font>
+															店铺名称
+															：
+														</div></td>
+													<td width="67%" height="29"><div align="left">
+															<input name="shopDetail.siteName" id="siteName" class="input" maxlength="50">
+														</div></td>
+												</tr>
+												<tr>
+													<td height="29"><div align="right">
+															<font color="#ff0000">*</font>
+															身份证号码
+															：
+														</div></td>
+													<td height="29"><div align="left">
+															<input type="text" name="shopDetail.idCardNum" id="idCardNum" class="input" maxlength="20">
+														</div></td>
+												</tr>
+												<tr>
+													<td height="29"><div align="right">
+															<font color="#ff0000">*</font>
+															地址
+															：
+														</div></td>
+													<td height="29"><div align="left">
+															<input style="WIDTH: 250px;" name="shopDetail.postAddr" id="postAddr" size="20" class="input" maxlength="300">
+														</div></td>
+												</tr>
+												<tr>
+													<td height="29"><div align="right">
+															<font color="#ff0000">*</font>
+															店铺类型
+															：
+														</div></td>
+													<td height="29"><div align="left">
+															&nbsp;&nbsp;
+															商家
+															<input type="radio" checked="checked" name="shopDetail.type" id="type" value="1" onclick="javascript:changeType(1)">&nbsp;
+															个人用户
+															<input type="radio" name="shopDetail.type" value="0" onclick="javascript:changeType(0)">
+														</div></td>
+												</tr>
+
+												<tr>
+													<td height="29"><div align="right">
+															<font color="#ff0000">*</font>
+															上传身份证照片
+															：
+														</div></td>
+													<td height="29"><div align="left">
+															<input type="file" style="WIDTH: 250px; margin-left: 10px" name="shopDetail.idCardPicFile" id="trafficPicFile" class="input">
+														</div></td>
+												</tr>
+												<tr>
+													<td height="29" colspan="2">
+														<div id="trafficPicDiv">
+															<table width="100%" cellpadding="0" cellspacing="0">
+																<tbody><tr>
+																	<td width="33%">
+																		<div align="right">
+																			<font color="#ff0000">*</font>
+																			上传营业执照照片
+																			：<br>
+																		</div>
+																	</td>
+																	<td><input type="file" style="WIDTH: 250px; margin-left: 10px;" name="shopDetail.trafficPicFile" id="trafficPicFile" class="input"></td>
+																</tr>
+															</tbody></table>
+														</div>
+													</td>
+												</tr>
+											</tbody></table>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td height="29"><div align="right">
+											用户条款
+										</div></td>
+									<td height="29"><br> <textarea id="regItem" name="regItem" class="lgtext" style="width: 600px; height: 100px; font-size: 9pt">﻿ LegendShop商城网站用户注册协议
+本协议是您与LegendShop商城网站（简称“本站”，网址：www.legendshop.cn）所有者（以下简称为“LegendShop商城”）之间就LegendShop商城网站服务等相关事宜所订立的契约，请您仔细阅读本注册协议，您点击“同意以下协议，提交”按钮后，本协议即构成对双方有约束力的法律文件。
+第1条 本站服务条款的确认和接纳
+1.1本站的各项电子服务的所有权和运作权归LegendShop商城所有。用户同意所有注册协议条款并完成注册程序，才能成为本站的正式用户。用户确认：本协议条款是处理双方权利义务的契约，始终有效，法律另有强制性规定或双方另有特别约定的，依其规定。
+1.2用户点击同意本协议的，即视为用户确认自己具有享受本站服务、下单购物等相应的权利能力和行为能力，能够独立承担法律责任。
+1.3如果您在18周岁以下，您只能在父母或监护人的监护参与下才能使用本站。
+1.4LegendShop商城保留在中华人民共和国大陆地区法施行之法律允许的范围内独自决定拒绝服务、关闭用户账户、清除或编辑内容或取消订单的权利。
+第2条 本站服务
+2.1LegendShop商城通过互联网依法为用户提供互联网信息等服务，用户在完全同意本协议及本站规定的情况下，方有权使用本站的相关服务。
+2.2用户必须自行准备如下设备和承担如下开支：（1）上网设备，包括并不限于电脑或者其他上网终端、调制解调器及其他必备的上网装置；（2）上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。
+第3条 用户信息
+3.1用户应自行诚信向本站提供注册资料，用户同意其提供的注册资料真实、准确、完整、合法有效，用户注册资料如有变动的，应及时更新其注册资料。如果用户提供的注册资料不合法、不真实、不准确、不详尽的，用户需承担因此引起的相应责任及后果，并且LegendShop商城保留终止用户使用LegendShop商城各项服务的权利。
+3.2用户在本站进行浏览、下单购物等活动时，涉及用户真实姓名/名称、通信地址、联系电话、电子邮箱等隐私信息的，本站将予以严格保密，除非得到用户的授权或法律另有规定，本站不会向外界披露用户隐私信息。
+3.3用户注册成功后，将产生用户名和密码等账户信息，您可以根据本站规定改变您的密码。用户应谨慎合理的保存、使用其用户名和密码。用户若发现任何非法使用用户账号或存在安全漏洞的情况，请立即通知本站并向公安机关报案。
+3.4用户同意，LegendShop商城拥有通过邮件、短信电话等形式，向在本站注册、购物用户、收货人发送订单信息、促销活动等告知信息的权利。
+3.5用户不得将在本站注册获得的账户借给他人使用，否则用户应承担由此产生的全部责任，并与实际使用人承担连带责任。
+3.6用户同意，LegendShop商城有权使用用户的注册信息、用户名、密码等信息，登陆进入用户的注册账户，进行证据保全，包括但不限于公证、见证等。
+第4条 用户依法言行义务 本协议依据国家相关法律法规规章制定，用户同意严格遵守以下义务：
+（1）不得传输或发表：煽动抗拒、破坏宪法和法律、行政法规实施的言论，煽动颠覆国家政权，推翻社会主义制度的言论，煽动分裂国家、破坏国家统一的的言论，煽动民族仇恨、民族歧视、破坏民族团结的言论；
+（2）从中国大陆向境外传输资料信息时必须符合中国有关法规； （3）不得利用本站从事洗钱、窃取商业秘密、窃取个人信息等违法犯罪活动；
+（4）不得干扰本站的正常运转，不得侵入本站及国家计算机信息系统；
+（5）不得传输或发表任何违法犯罪的、骚扰性的、中伤他人的、辱骂性的、恐吓性的、伤害性的、庸俗的，淫秽的、不文明的等信息资料；
+（6）不得传输或发表损害国家社会公共利益和涉及国家安全的信息资料或言论； （7）不得教唆他人从事本条所禁止的行为；
+（8）不得利用在本站注册的账户进行牟利性经营活动； （9）不得发布任何侵犯他人著作权、商标权等知识产权或合法权利的内容；
+用户应不时关注并遵守本站不时公布或修改的各类合法规则规定。 本站保有删除站内各类不符合法律政策或不真实的信息内容而无须通知用户的权利。
+若用户未遵守以上规定的，本站有权作出独立判断并采取暂停或关闭用户帐号等措施。用户须对自己在网上的言论和行为承担法律责任。 第5条 商品信息
+本站上的商品价格、数量、是否有货等商品信息随时都有可能发生变动，本站不作特别通知。由于网站上商品信息的数量极其庞大，虽然本站会尽最大努力保证您所浏览商品信息的准确性，但由于众所周知的互联网技术因素等客观原因存在，本站网页显示的信息可能会有一定的滞后性或差错，对此情形您知悉并理解；LegendShop商城欢迎纠错，并会视情况给予纠错者一定的奖励。
+为表述便利，商品和服务简称为“商品”或“货物”。 第6条 订单
+6.1在您下订单时，请您仔细确认所购商品的名称、价格、数量、型号、规格、尺寸、联系地址、电话、收货人等信息。收货人与用户本人不一致的，收货人的行为和意思表示视为用户的行为和意思表示，用户应对收货人的行为及意思表示的法律后果承担连带责任。
+6.2除法律另有强制性规定外，双方约定如下：本站上销售方展示的商品和价格等信息仅仅是要约邀请，您下单时须填写您希望购买的商品数量、价款及支付方式、收货人、联系方式、收货地址（合同履行地点）、合同履行方式等内容；系统生成的订单信息是计算机信息系统根据您填写的内容自动生成的数据，仅是您向销售方发出的合同要约；销售方收到您的订单信息后，只有在销售方将您在订单中订购的商品从仓库实际直接向您发出时（
+以商品出库为标志），方视为您与销售方之间就实际直接向您发出的商品建立了合同关系；如果您在一份订单里订购了多种商品并且销售方只给您发出了部分商品时，您与销售方之间仅就实际直接向您发出的商品建立了合同关系；只有在销售方实际直接向您发出了订单中订购的其他商品时，您和销售方之间就订单中该其他已实际直接向您发出的商品才成立合同关系。您可以随时登陆您在本站注册的账户，查询您的订单状态。
+6.3由于市场变化及各种以合理商业努力难以控制的因素的影响，本站无法保证您提交的订单信息中希望购买的商品都会有货；如您拟购买的商品，发生缺货，您有权取消订单。
+第7条 配送
+7.1销售方将会把商品（货物）送到您所指定的收货地址，所有在本站上列出的送货时间为参考时间，参考时间的计算是根据库存状况、正常的处理过程和送货时间、送货地点的基础上估计得出的。
+7.2因如下情况造成订单延迟或无法配送等，销售方不承担延迟配送的责任： （1）用户提供的信息错误、地址不详细等原因导致的；
+（2）货物送达后无人签收，导致无法配送或延迟配送的； （3）情势变更因素导致的；
+（4）不可抗力因素导致的，例如：自然灾害、交通戒严、突发战争等。 第8条 所有权及知识产权条款
+8.1用户一旦接受本协议，即表明该用户主动将其在任何时间段在本站发表的任何形式的信息内容（包括但不限于客户评价、客户咨询、各类话题文章等信息内容）的财产性权利等任何可转让的权利，如著作权财产权（包括并不限于：复制权、发行权、出租权、展览权、表演权、放映权、广播权、信息网络传播权、摄制权、改编权、翻译权、汇编权以及应当由著作权人享有的其他可转让权利），全部独家且不可撤销地转让给LegendShop商城所有，用户同意LegendShop商城有权就任何主体侵权而单独提起诉讼。
+8.2本协议已经构成《中华人民共和国著作权法》第二十五条（条文序号依照2011年版著作权法确定）及相关法律规定的著作财产权等权利转让书面协议，其效力及于用户在LegendShop商城网站上发布的任何受著作权法保护的作品内容，无论该等内容形成于本协议订立前还是本协议订立后。
+8.3用户同意并已充分了解本协议的条款，承诺不将已发表于本站的信息，以任何形式发布或授权其它主体以任何方式使用（包括但限于在各类网站、媒体上使用）。
+8.4LegendShop商城是本站的制作者,拥有此网站内容及资源的著作权等合法权利,受国家法律保护,有权不时地对本协议及本站的内容进行修改，并在本站张贴，无须另行通知用户。在法律允许的最大限度范围内，LegendShop商城对本协议及本站内容拥有解释权。
+8.5除法律另有强制性规定外，未经LegendShop商城明确的特别书面许可,任何单位或个人不得以任何方式非法地全部或部分复制、转载、引用、链接、抓取或以其他方式使用本站的信息内容，否则，LegendShop商城有权追究其法律责任。
+8.6本站所刊登的资料信息（诸如文字、图表、标识、按钮图标、图像、声音文件片段、数字下载、数据编辑和软件），均是LegendShop商城或其内容提供者的财产，受中国和国际版权法的保护。本站上所有内容的汇编是LegendShop商城的排他财产，受中国和国际版权法的保护。本站上所有软件都是LegendShop商城或其关联公司或其软件供应商的财产，受中国和国际版权法的保护。
+第9条 责任限制及不承诺担保
+除非另有明确的书面说明,本站及其所包含的或以其它方式通过本站提供给您的全部信息、内容、材料、产品（包括软件）和服务，均是在“按现状”和“按现有”的基础上提供的。
+除非另有明确的书面说明,LegendShop商城不对本站的运营及其包含在本网站上的信息、内容、材料、产品（包括软件）或服务作任何形式的、明示或默示的声明或担保（根据中华人民共和国法律另有规定的以外）。
+LegendShop商城不担保本站所包含的或以其它方式通过本站提供给您的全部信息、内容、材料、产品（包括软件）和服务、其服务器或从本站发出的电子信件、信息没有病毒或其他有害成分。
+如因不可抗力或其它本站无法控制的原因使本站销售系统崩溃或无法正常使用导致网上交易无法完成或丢失有关的信息、记录等，LegendShop商城会合理地尽力协助处理善后事宜。
+第10条 协议更新及用户关注义务
+根据国家法律法规变化及网站运营需要，LegendShop商城有权对本协议条款不时地进行修改，修改后的协议一旦被张贴在本站上即生效，并代替原来的协议。用户可随时登陆查阅最新协议；用户有义务不时关注并阅读最新版的协议及网站公告。如用户不同意更新后的协议，可以且应立即停止接受LegendShop商城网站依据本协议提供的服务；如用户继续使用本网站提供的服务的，即视为同意更新后的协议。LegendShop商城建议您在使用本站之前阅读本协议及本站的公告。
+如果本协议中任何一条被视为废止、无效或因任何理由不可执行，该条应视为可分的且并不影响任何其余条款的有效性和可执行性。 第11条 法律管辖和适用
+本协议的订立、执行和解释及争议的解决均应适用在中华人民共和国大陆地区适用之有效法律（但不包括其冲突法规则）。
+如发生本协议与适用之法律相抵触时，则这些条款将完全按法律规定重新解释，而其它有效条款继续有效。
+如缔约方就本协议内容或其执行发生任何争议，双方应尽力友好协商解决；协商不成时，任何一方均可向有管辖权的中华人民共和国大陆地区法院提起诉讼。
+第12条 其他 12.1LegendShop商城网站所有者是指在政府部门依法许可或备案的LegendShop商城网站经营主体。
+12.2LegendShop商城尊重用户和消费者的合法权利，本协议及本网站上发布的各类规则、声明等其他内容，均是为了更好的、更加便利的为用户和消费者提供服务。本站欢迎用户和社会各界提出意见和建议，LegendShop商城将虚心接受并适时修改本协议及本站上的各类规则。
+12.3本协议内容中以黑体、加粗、下划线、斜体等方式显著标识的条款，请用户着重阅读。
+12.4您点击本协议上方的“同意以下协议，提交”按钮即视为您完全接受本协议，在点击之前请您再次确认已知悉并完全理解本协议的全部内容。
+</textarea>
+								</td></tr>
+								<tr>
+									<td height="35" colspan="2" align="center"><input type="submit" value="确认" class="s">
+
+									</td>
+								</tr>
+							</tbody></table>
+						</form>
+					</td>
+				</tr>
+			</tbody></table></td>
+	</tr>
+</tbody></table>
+
+
+<script type="text/javascript">
+ 
+
+		function sendCheckMob(value) {
+			$.get("/getCheckNo", {
+				mob : value
+			}, function(data) {
+				alert( data );
+			if(!data == "true"){
+				return false;
+			} 
+			});
+			return true;
+		}
+		jQuery.validator.setDefaults({});
+		String.prototype.isAlpha = function() {
+			return (this.replace(/^(1[3|4|7|5|8])[\d]{9}$/g, "").length == 0);
+		};
+	
+		jQuery.validator.addMethod("checkName", function(value, element) {
+					return checkName();
+		}, '已占用！');
+		
+			jQuery.validator.addMethod("addEmail", function(value, element) {
+			if (!value.isAlpha()) return false;
+			jQuery("#userMail").val(value + "@gomall.la");
+			//发送验证码
+			if (sendCheckMob(value)) {
+				jQuery("#mask").css("display", "block");
+				jQuery("#checkArea").css("display", "block");
+				jQuery("#checkNo").focus();
+				return true;
+			}
+			return false;
+
+		}, '手机格式不正确！');
+			jQuery.validator.addMethod("isOK", function(value, element) {
+				jQuery("#mask").css("display", "none");
+				jQuery("#checkArea").css("display", "none");
+				jQuery("#checkNo").css("display", "none");
+				jQuery("#password").focus();
+			return true;
+		}, '已经占用！');
+		jQuery(document)
+				.ready(
+						function() {
+							jQuery("#userRegForm")
+									.validate(
+											{
+												rules : {
+													name : {
+														required : true,
+														minlength : 11,
+														checkName: true,													
+														addEmail : true
+													},
+													checkNo : {
+														required : true,
+														minlength : 4,
+														digits:true,
+														isOK : true
+													},
+													password : {
+														required : true,
+														minlength : 6
+													},
+													"shopDetail.postAddr" : {
+														required : "#openShop:checked",
+														minlength : 2
+													},
+													"shopDetail.idCardNum" : {
+														required : "#openShop:checked",
+														minlength : 15
+													},
+													"shopDetail.type" : {
+														required : "#openShop:checked"
+													},
+													"shopDetail.idCardPicFile" : {
+														required : "#openShop:checked"
+													},
+													"shopDetail.trafficPicFile" : {
+														required : "#openShop:checked",
+														required : "#type:checked"
+													}
+
+												},
+												messages : {
+													name : {
+														required : '请输入手机',
+														minlength : "手机号不正确!"
+													},
+													password : {
+														required : '请输入密码',
+														minlength : "至少６位数!"
+													},
+
+													userAdds : {
+														required : '必填！'
+													},
+													"shopDetail.siteName" : {
+														required : ' 必填项',
+														minlength : ' 不能少于 2 个字符'
+													},
+													"shopDetail.postAddr" : {
+														required : ' 必填项',
+														minlength : ' 不能少于 2 个字符'
+													},
+													"shopDetail.idCardNum" : {
+														required : ' 必填项',
+														minlength : ' 不能少于 15 个字符'
+													},
+													"shopDetail.type" : {
+														required : ' 必填项'
+													},
+													"shopDetail.idCardPicFile" : {
+														required : ' 必填项'
+													},
+													"shopDetail.trafficPicFile" : {
+														required : ' 必填项'
+													}
+												}
+											});
+
+							jQuery("#password").blur(
+									function() {
+										jQuery("#password2").val(
+												jQuery("#password").val());
+									});
+							jQuery("#name").blur(function() {
+								jQuery("#nickName").val(jQuery("#name").val());
+							});
+
+							jQuery("#name").focus();
+
+						});
+
+		// propose username by combining first- and lastname
+		function checkName() {
+			var result = true;
+			var nameValue = jQuery("#name").val();
+
+			if (nameValue != null && nameValue != '') {
+				if (nameValue.length == 11 && nameValue.isAlpha()) {
+					$.ajax({
+						url : "/isUserExist",
+						data : {
+							"userName" : nameValue
+						},
+						type : 'post',
+						async : false, //默认为true 异步   
+						error : function(jqXHR, textStatus, errorThrown) {
+							//console.log(textStatus, errorThrown);
+						},
+						success : function(retData) {
+							if ('true' == retData) {
+								result = false;
+							}
+						}
+					});
+				}
+			}
+			return result;
+		}
+
+		function isEmail(str) {
+			var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+			return reg.test(str);
+		}
+
+		function isOpenShop(obj) {
+			if (obj.checked) {
+				document.getElementById("shopDetail").style.display = "block";
+			} else {
+				document.getElementById("shopDetail").style.display = "none";
+			}
+		}
+
+		function changeType(obj) {
+			if (obj == 1) {
+				document.getElementById("trafficPicDiv").style.display = "block";
+			} else {
+				document.getElementById("trafficPicDiv").style.display = "none";
+			}
+		}
+	</script>
+
+	
+<link href="./css/css.css" rel="stylesheet" type="text/css">
+<link href="./css/pager.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+
+
+
+
+	
+		<table width="954px" class="tables" style="margin-top: 5px" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td class="titlebg">网上购物步骤 =&gt; 1、会员登录 =&gt; 2、选购商品 =&gt; 3、去收银台 =&gt; 完成支付=&gt; 购物完成</td>
+			</tr>
+			<tr>
+				<td>
+
+
+
+
+
+
+
+<table width="954px" cellpadding="3px" cellspacing="3px" align="center">
+	<tbody><tr><td width="100%" align="center">
+			<a href="http://localhost/news/190" target="_blank">大家电购买帮助</a>
+		
+			<a href="http://localhost/news/188" target="_blank">公司简介</a>
+		
+			<a href="http://localhost/news/189" target="_blank">售后服务</a>
+		
+			<a href="http://localhost/news/182" target="_blank">交易条款</a>
+		 LegendShop多用户商城系统 
+    	        &nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank">
+			</a>
+		</td>
+	</tr>
+	<tr>
+		<td width="100%" align="center">©Copyright 2012 Power By <a href="http://www.legendesign.net/" target="_blank">LegendShop
+				3.0.3.5</a> All Rights Reserved.&nbsp;<a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备09106104号-10</a>
+		</td>
+	</tr>
+	<tr>
+</tr></tbody></table></td>
+			</tr>
+		</tbody></table>
+	
+	
+
+<br>
+
+</div>
+
+</body></html>

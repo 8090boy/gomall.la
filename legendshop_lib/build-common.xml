@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="legendshop_lib" default="dist">
+    <import file="dependencies.xml"/>
+	<dirname property="included.basedir" file="${ant.file.included}"/>
+	<property file="${included.basedir}/../legendshop_lib/build-common.properties" />
+	<property file="${included.basedir}/build.properties" />
+	<property name="dist.dir" value="${tmp.dir}/dist" />
+	<property name="war.file" value="${dist.dir}/${app.name}.war" />
+	<property name="ear.file" value="${dist.dir}/${app.name}.ear" />
+	<property name="jar.name" value="${release.root}/legendshop_${ant.project.name}${app.version}.jar" />
+	<property name="jocky.name" value="${release.root}/${app.name}.jar" />
+	<property name="dest.dir" value="../${web.name}" />
+	
+	<tstamp prefix="build-info">
+		<format property="current-date" pattern="d-MMMM-yyyy" locale="en" />
+		<format property="current-time" pattern="hh:mm:ss a z" locale="cn" />
+		<format property="year-month-day" pattern="yyyy-MM-dd" locale="cn" />
+	</tstamp>
+
+	<path id="project.classpath">
+			<path refid="base.path" />
+			<path refid="dependency.classpath" />
+		</path>
+
+		<path id="base.path">
+			<fileset dir="${included.basedir}/../legendshop_lib/lib">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${included.basedir}/../legendshop_lib/jeelib">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${included.basedir}/../legendshop_lib/ejblib">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+
+		<path id="dependency.classpath">
+			<fileset dir="${release.root}">
+				<include name="*.jar" />
+			</fileset>
+		</path>
+	
+	<target name="default" depends="dist"/>
+	
+	<!-- 系统初始化 -->
+	<target name="init" depends="clean">
+		<echo>系统初始化,建立相应的目录</echo>
+		<!-- Create the time stamp -->
+		<tstamp />
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${class.dir}" />
+		<mkdir dir="${dist.dir}" />
+	</target>
+	
+	<!-- 清除文件 -->
+    <target name="clean" description="Deletes files created during the build">
+        <echo message="${ant.project.name} - build-common.clean"/>
+		<delete dir="${dist.dir}" />
+		<delete dir="${class.dir}" />
+    </target>
+
+    <target name="compile" depends="init" description="Compiles source code">
+		<echo>从${src.dir}编译代码到目录${class.dir}并拷贝相关的属性文件</echo>
+		<javac srcdir="${src.dir}" destdir="${class.dir}" encoding="utf-8" debug="on" source="1.6">
+			<classpath refid="project.classpath" />
+		</javac>
+		<!-- 拷贝代码目录下的属性文件 -->
+		<copy todir="${class.dir}" preservelastmodified="true">
+			<fileset dir="${src.dir}" includes="${config_file.type}" />
+		</copy>
+		<!-- 拷贝resource目录下的属性文件
+		<copy todir="${class.dir}" preservelastmodified="true">
+			<fileset dir="${resource.dir}" includes="**/*" />
+		</copy>
+		 -->
+    </target>
+	
+	<!--编译客户端包  -->
+    <target name="dist" depends="compile" description="Creates distributable">
+		<echo>编译客户端jar包：${jar.name} </echo>
+		<jar destfile="${jar.name}">
+			<fileset dir="${class.dir}" includes="com/legendshop/**/*.class,**/*.xml,**/*.properties" excludes="**/test/**/*.class"/>
+			<fileset dir="${resource.dir}" includes="**/*" />
+			<manifest>
+				<attribute name="Built-By" value="${builder}" />
+				<attribute name="Version" value="${app.version}" />
+				<attribute name="Built-On" value="${build-info.year-month-day}" />
+				<attribute name="Built-At" value="${build-info.current-time}" />
+			</manifest>
+		</jar>
+    </target>
+
+    <target name="clean.dependencies" 
+            description="Deletes files created during the build (includes dependencies)">
+        <antcall target="depend.${ant.project.name}">
+            <param name="dependency.target" value="clean"/>
+        </antcall>
+    </target>
+
+    <target name="dist.dependencies"
+            description="Creates distributable (includes dependencies)">
+        <antcall target="depend.${ant.project.name}">
+            <param name="dependency.target" value="dist"/>
+        </antcall>
+    </target>
+</project>

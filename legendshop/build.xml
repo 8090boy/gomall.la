@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="legendshop" default="war">
+	<import file="../legendshop_lib/build-common.xml" />
+	<property name="build.src" value="${basedir}/src/java" />
+	<property name="build.dest" value="${basedir}/build/classes" />
+	<property name="build.javadocs" value="${basedir}/build/doc" />
+	<property name="jar.dest" value="${basedir}/build/jar" />
+	<property name="war.dest" value="${basedir}/build/war" />
+	<target name="war" depends="dist.dependencies" description="war package">
+		<war warfile="${war.dest}/ROOT.war" webxml="${basedir}/WebRoot/WEB-INF/web.xml">
+			<!-- <lib dir="${basedir}/WebRoot/WEB-INF/lib"/> -->
+			<lib dir="${release.root}" includes="*.jar"
+				excludes="legendshop_${ant.project.name}${app.version}.jar" />
+			<lib dir="${basedir}/../legendshop_lib/lib" excludes="legendshop.jar" />
+			<classes dir="${build.dest}" />
+			<fileset dir="${basedir}/WebRoot" />
+			<!--building plugins -->
+			<zipfileset dir="${included.basedir}/../legendshop_search/advanceSearch"
+				prefix="WEB-INF/plugins/advanceSearch" />
+			<manifest>
+				<attribute name="Built-By" value="${builder}" />
+				<attribute name="Version" value="${app.version}" />
+				<attribute name="Built-On" value="${build-info.year-month-day}" />
+				<attribute name="Built-At" value="${build-info.current-time}" />
+			</manifest>
+		</war>
+	</target>
+</project>

@@ -1,0 +1,423 @@
+* {
+	font-family: microsoft YaHei;
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	text-align: left;
+	font: normal 12px/1.6em simsun
+}
+
+a {
+	text-decoration: none;
+	color: #353535;
+}
+
+a:hover {
+	color: #CD0102;
+}
+
+img {
+	border: 0;
+}
+
+a:visited {
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: none
+}
+
+a:active {
+	text-decoration: none
+}
+
+a:link {
+	text-decoration: none
+}
+
+td {
+	font-size: 10pt;
+}
+
+.afterOperate {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #666666
+}
+
+#mask {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10100;
+	background: #311;
+	display: none;
+	filter: alpha(opacity = 70); /*IE滤镜，透明度50%*/
+	-moz-opacity: 0.7; /*Firefox私有，透明度50%*/
+	opacity: 0.7; /*其他，透明度50%*/
+}
+
+#checkArea {
+	z-index: 10200;
+	display: none;
+	position: fixed;
+	width: 200px;
+	height: 60px;
+	background: none;
+	left: 50%;
+	top: 50%;
+	margin-left: -100px;
+	margin-top: -40px;
+}
+
+#checkArea h3 {
+	z-index: 10210;
+	font-size: 20px;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	color: white;
+	font-family: microsoft yahei;
+}
+
+#checkArea input {
+	z-index: 10220;
+	font-size: 24px;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: lighter;
+	background: #ffffcc;
+	color: black;
+	text-align: center;
+	margin: 0px auto;
+	display: block;
+}
+
+#wrap {
+	display: none;
+	position: fixed;
+	width: 500px;
+	height: 320px;
+	padding-top: 30px;
+	left: 50%;
+	top: 50%;
+	margin-left: -250px;
+	margin-top: -180px;
+	z-index: 10101;
+	background: white;
+	cursor: default;
+}
+
+#wrap h5 {
+	text-align: center;
+	font-size: 22px;
+	font-weight: lighter;
+	margin: 5px 0px 10px;
+}
+
+#wrap h6 {
+	font-size: 12px;
+	font-weight: lighter;
+	text-indent: 24px;
+	line-height: 20px;
+	padding: 10px;
+}
+
+#wrap .clubReg {
+	width: 460px;
+	margin: 0px auto;
+}
+
+#wrap .clubReg div {
+	margin: 5px 0px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#wrap .clubReg div b {
+	padding: 5px 10px;
+	display: inline-block;
+	text-align: left;
+	font-size: 16px;
+	font-weight: lighter;
+	line-height: 24px;
+	color: #666;
+}
+
+#wrap .clubReg div b.error {
+	font-size: 20px;
+	color: red;
+}
+
+#wrap .clubReg div b input {
+	width: 260px;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	text-align: left;
+	text-indent: 5px;
+	font-size: 14px;
+	font-weight: lighter;
+}
+
+#wrap .clubReg div b input:FOCUS {
+	background: #ffffdf;
+}
+
+#wrap .clubReg div b input[name=note] {
+	width: 200px;
+}
+
+#wrap .clubReg div #FAQ {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	padding: 0px;
+	margin: 0px;
+	background: orange;
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	font-size: 16px;
+}
+
+#wrap .clubReg div #tipCon {
+	display: none;
+	position: relative;
+	width: 200px;
+	height: 80px;
+	border: 2px solid orange;
+	padding: 20px;
+	line-height: 24px;
+	text-indent: 24px;
+	bottom: 90px;
+	right: -400px;
+	background: #ffffdf;
+}
+
+#wrap .clubReg div #tipCon b {
+	display: block;
+	width: 0px;
+	height: 0px;
+	line-height: 0px;
+	padding: 0px;
+	border: 15px solid transparent;
+	border-right: 15px solid orange;
+	position: absolute;
+	top: 50%;
+	left: -30px;
+	margin-top: -10px;
+}
+
+#wrap  h6 a {
+	cursor: pointer;
+	text-decoration: underline;
+	color: #992222;
+}
+
+#wrap  h6 a:HOVER {
+	background: #992222;
+	color: white;
+}
+
+#wrap  #submit {
+	display: block;
+	text-decoration: none;
+	width: 120px;
+	height: 50px;
+	font-size: 18px;
+	color: white;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	margin: 20px auto 0px;
+	background: #881111;
+}
+
+#wrap  #submit:HOVER {
+	background: #992222;
+}
+
+#wrap  #close {
+	color: #aaa;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	font-size: 30px;
+	font-weight: lighter;
+	width: 60px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	display: inline-block;
+}
+
+#wrap  #close:HOVER {
+	color: #993333
+}
+
+.cursor_pointer {
+	cursor: pointer;
+}
+
+.flashNews {
+	position: relative;
+	width: 530px;
+	margin-bottom: 0px;
+	overflow: hidden;
+	border: 1px solid #CCCCCC;
+	text-align: left
+}
+
+.firstNews {
+	position: relative;
+	float: right;
+	width: 744px;
+	margin-bottom: 0px;
+	overflow: hidden;
+	border: 1px solid #B6CAE3;
+}
+
+.flashNews, .firstNews {
+	height: 290px;
+}
+
+.flashNews .bg {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 530px;
+	height: 80px;
+	background: #000000;
+	filter: alpha(opacity = 39);
+	opacity: 0.39;
+}
+
+.flashNews h3 {
+	position: absolute;
+	left: 25px;
+	top: 220px;
+	width: 530px;
+	height: 20px;
+	line-height: 20px;
+	z-index: 2;
+}
+
+.flashNews h3 a {
+	font-size: 16px;
+	font-family: "黑体";
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+.flashNews h3 a:hover {
+	color: #F20000;
+}
+/* 小标题 */
+.flashNews p {
+	position: absolute;
+	left: 80px;
+	top: 250px;
+	width: 530px;
+	height: 15px;
+	line-height: 15px;;
+	z-index: 3;
+}
+
+.flashNews p a {
+	color: #FFFFFF;
+}
+
+.flashNews p a:hover {
+	color: #F20000;
+}
+
+.flashNews ul {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding-left: 47px;
+	z-index: 2;
+}
+
+.flashNews ul li {
+	float: left;
+	width: 15px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	margin-left: 1px;
+	background: #000000;
+}
+
+.flashNews ul li a {
+	display: block;
+	width: 15px;
+	height: 18px;
+	font-size: 10px;
+	font-family: Tahoma;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.flashNews ul li a:hover, .flashNews ul li a.sel {
+	color: #F20000;
+}
+
+.firstNews h3 {
+	width: 530px;
+	height: 27px;
+	line-height: 27px;
+	text-indent: 14px;
+	font-size: 5px;
+	border: 1px solid #FFFFFF;
+	background: #F2F6FB;
+}
+
+.firstNews p {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.firstNews p a {
+	font-size: 12px;
+}
+
+.firstNews h4 {
+	width: 530px;
+	height: 25px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 5px;
+	line-height: 25px;
+	font-weight: normal;
+	font-size: 18px;
+	font-family: "黑体";
+}
+
+.firstNews ul {
+	width: 530px;
+	height: auto;
+	overflow: hidden;
+	_zoom: 1;
+	margin: 0 0 0 12px;
+}
+
+.firstNews ul li {
+	position: relative;
+	width: 410px;
+	height: 22px;
+	line-height: 22px;
+	overflow: hidden;
+	text-indent: 10px;
+	font-size: 14px;
+}
